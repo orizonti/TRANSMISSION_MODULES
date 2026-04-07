@@ -70,21 +70,24 @@ template<int N_CHAN>
 class CommandSetPair
 {
    public:
-   float Param1 = 0;
-   float Param2 = 0;
+   CommandSetPair() { Command.first = 0; Command.second = 0; }
+   CommandSetPair(float value, float value2) { Command.first = value; Command.second = value2; }
+   std::pair<float,float> Command;
 
    public:
-   template<typename T> void operator=(const QPair<T,T>& Pos)      {Param1 = Pos.first;                Param2 = Pos.second; };
-                        void operator=(StateRotaryControl setting) {Param1 = setting.Engine1.Position; Param2 = setting.Engine2.Position; };
+   template<typename T> void operator=(const QPair<T,T>& Pos)      { Command = Pos; };
+                        void operator=(StateRotaryControl setting) { Command.first  = setting.Engine1.Position; 
+                                                                     Command.second = setting.Engine2.Position; };
 
-   template<typename T> void setData(const QPair<T,T>& Pos)      {Param1 = Pos.first; Param2 = Pos.second; };
-                      void   setData(StateRotaryControl setting) {Param1 = setting.Engine1.Position; Param2 = setting.Engine2.Position; }
+   template<typename T> void setData(const QPair<T,T>& Pos)      { Command = Pos; };
+                      void   setData(StateRotaryControl setting) { Command.first = setting.Engine1.Position; 
+                                                                   Command.second = setting.Engine2.Position; }
 
-   friend void operator<<(QDataStream& stream, CommandSetPair& command) { stream << command.Param1 << command.Param2; };
+   friend void operator<<(QDataStream& stream, CommandSetPair& command) { stream << command.Command.first << command.Command.second; };
 
    public:
 
-   std::string print() { std::stringstream stream; stream << Param1 << " " << Param1; return stream.str(); }
+   std::string print() { std::stringstream stream; stream << Command.first << " " << Command.second; return stream.str(); }
 };
 
 template<int N_CHAN>

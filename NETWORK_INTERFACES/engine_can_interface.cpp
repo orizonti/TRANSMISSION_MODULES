@@ -86,15 +86,15 @@ void CANConnectionEngine::slotSendMessage(const QByteArray& message, uint16_t ID
     device->writeFrame(frame);
 }
 
-void CANConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice)
-{
-  QByteArray message(DataCommand,size);
-
-  QCanBusFrame frame = QCanBusFrame(IDDevice, message);
-               frame.setFrameType(QCanBusFrame::DataFrame);
-
-  device->writeFrame(frame);
-}
+//void CANConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice)
+//{
+//  QByteArray message(DataCommand,size);
+//
+//  QCanBusFrame frame = QCanBusFrame(IDDevice, message);
+//               frame.setFrameType(QCanBusFrame::DataFrame);
+//
+//  device->writeFrame(frame);
+//}
 
 
 

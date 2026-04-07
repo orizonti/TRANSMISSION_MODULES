@@ -7,6 +7,25 @@
 #include <map>
 #include <iostream>
 
+template<int OFFSET = 0>
+class TypeRegisterSizes
+{
+  public:
+      static constexpr std::array<int,100> SIZES{12,24,36,48,64,72,88,100};
+
+      static constexpr int GetMinTypeSize(const std::array<int,100> SIZES_STORE) 
+      { return *std::min_element(SIZES_STORE.begin(), 
+                                          SIZES_STORE.end(), 
+                                          [](const int& a, const int& b) -> bool { return a == 0 ? false : a < b; }); }
+      static constexpr int GetMaxTypeSize(const std::array<int,100> SIZES_STORE) 
+      { 
+            return *std::max_element(SIZES_STORE.begin(), 
+                                     SIZES_STORE.end()); }
+
+      static constexpr int MinSize = GetMinTypeSize(SIZES); 
+      static constexpr int MaxSize = GetMaxTypeSize(SIZES); 
+};
+
 template<int NUM>
 class TypeRegisterInfo
 {
@@ -61,8 +80,8 @@ constexpr static int GetTypeSize() { return sizeof(T);}
           static bool isTypeRegistered()               { return TypeRegisterID<0>::isRegistered(TYPE_ID);}
           static bool isTypeRegistered(const int& NUM) { return TypeRegisterID<0>::isRegistered(NUM);}
 
-          static constexpr int GetMinTypeSize() {return 2;}
-          static constexpr int GetMaxTypeSize() {return 1000;}
+      template<int OFFSET> static constexpr int GetMinTypeSize() { return TypeRegisterSizes<OFFSET>::MinSize; } 
+      template<int OFFSET> static constexpr int GetMaxTypeSize() { return TypeRegisterSizes<OFFSET>::MaxSize; } 
 
       static void registerType(std::string name) 
       { 
@@ -79,6 +98,7 @@ constexpr static int GetTypeSize() { return sizeof(T);}
 };
 
 template<typename T> TypeRegisterInfo<0> TypeRegister<T>::TYPES_INFO;
+
 
 
 #endif 

@@ -49,7 +49,7 @@ public:
 
 public slots:
   void slotSendMessage(const QByteArray& ArrayCommand, uint16_t IDDevice = 0);
-  void slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice = 0);
+  //void slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice = 0);
 
   void slotCheckConnection();
   void slotCloseConnection(){};
