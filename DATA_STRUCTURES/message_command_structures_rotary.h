@@ -90,20 +90,12 @@ class alignas(1)  ControlRX
 struct DriveTX
 {
    enum class Modes{M_POS = 1, M_VEL = 2};
- //  uint8_t mode      = (uint8_t)Modes::M_VEL;  // целевой режим управление
- //  uint8_t digital   = 0x00;  // значение на цифровых выходах
- // uint16_t reserve   = 0xAA;  // резервное поле данных
- // uint16_t acc_limit = 100;   // лимит по ускорению в градус/сек^2
-     uint8_t mode = 0x01;
-     uint8_t Param2 = 0x00;
-     uint8_t Param3 = 0x00;
-     uint8_t Param4 = 0x00;
-     uint8_t Param5 = 0xA0;
-     uint8_t Param6 = 0x0F;
-     uint8_t Param7 = 0x00;
-     uint8_t Param8 = 0x00;
-
-    double target    = 0.0;   // задание в зависимости от режима управления
+   uint8_t mode      = (uint8_t)Modes::M_POS;  // целевой режим управление
+   uint8_t digital   = 0x00;                   // значение на цифровых выходах
+  uint16_t reserve1  = 0x00;  
+  uint16_t acc_limit = 60;                     // лимит по ускорению в градус/сек^2
+  uint16_t reserve2  = 0x00;  
+    double target    = 0.0;  
 
   friend QDataStream& operator>>(QDataStream& stream, DriveTX& rec);
 };
@@ -132,7 +124,7 @@ class ControlTX
                        void setMode(uint8_t Mode)         
                        { 
                         qDebug() << "ROTARY CONTROL TX SET MODE: " << Mode;
-                        value0.mode = Mode; value1.mode= Mode; 
+                        //value0.mode = Mode; value1.mode= Mode; 
                        };
                        void setAccelLimit(uint32_t Limit) {};
        static constexpr int getSize() { return 28;};

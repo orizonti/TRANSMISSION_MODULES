@@ -50,6 +50,16 @@ concept HEADER_STANDART = requires(HEADER_TYPE H)
     requires HAS_ANY_MESSAGE_FUNC<HEADER_TYPE>;
 };
 
+template<typename T> concept HAS_HEADER_FIELD = requires(T t) { t.HEADER; };
+template<typename T> concept HAS_DATA_FIELD = requires(T t)   { t.DATA; };
+
+template<class MESSAGE_TYPE>
+concept MESSAGE_STANDART = requires(MESSAGE_TYPE M) 
+{ 
+    requires HAS_HEADER_FIELD<MESSAGE_TYPE>;
+    requires HAS_DATA_FIELD<MESSAGE_TYPE>;
+};
+
 template<typename T, typename H> 
 class MessageGeneric
 {

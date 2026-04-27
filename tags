@@ -1,0 +1,599 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Amplitude	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  Amplitude   = 1;$/;"	m	struct:CommandCalibration
+AppendCallback	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    void AppendCallback(const MessageCall& Call)$/;"	f	class:MessageDispatcher
+BufferChunkSize	RING_BUFFER/message_iterator_generic.h	/^	uint16_t  BufferChunkSize = 100;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+BufferChunkSize	RING_BUFFER/message_iterator_generic.h	/^	uint8_t  BufferChunkSize = 100;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+BufferSize	RING_BUFFER/engine_ring_buffer_generic.h	/^	std::size_t  BufferSize = M_SIZE*M_NUM;$/;"	m	class:RingBufferGeneric
+BytesAvailable	RING_BUFFER/message_iterator_generic.h	/^	uint16_t BytesAvailable = 0;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+BytesTo	RING_BUFFER/message_iterator_generic.h	/^	 int BytesTo(const MessageIteratorGenericBase<H>& It) { return It.PtrMessageBegin - PtrMessageBegin;}; $/;"	f	class:IteratorMode::MessageIteratorGenericBase
+BytesTo	RING_BUFFER/message_iterator_generic.h	/^	int BytesTo(const MessageIteratorGenericBase<H>& It) { return It.PtrMessageBegin - PtrMessageBegin;}; $/;"	f	class:IteratorMode::MessageIteratorGenericBase
+CANConnectionEngine	NETWORK_INTERFACES/engine_can_interface.cpp	/^CANConnectionEngine::CANConnectionEngine(QString Device, QObject *parent) : ConnectionInterface(parent)$/;"	f	class:CANConnectionEngine
+CANConnectionEngine	NETWORK_INTERFACES/engine_can_interface.h	/^class CANConnectionEngine : public ConnectionInterface$/;"	c
+CANDelayMeasure	NETWORK_INTERFACES/engine_can_interface.h	/^  CANDelayMeasure(QObject* parent = nullptr) : CANTestMessage(parent) {};$/;"	f	class:CANDelayMeasure
+CANDelayMeasure	NETWORK_INTERFACES/engine_can_interface.h	/^class CANDelayMeasure: public CANTestMessage$/;"	c
+CANTestMessage	NETWORK_INTERFACES/engine_can_interface.h	/^  CANTestMessage(QObject* parent = nullptr) : QObject(parent) $/;"	f	class:CANTestMessage
+CANTestMessage	NETWORK_INTERFACES/engine_can_interface.h	/^class CANTestMessage: public QObject$/;"	c
+CAN_ENGINE_INTERFACE_H	NETWORK_INTERFACES/engine_can_interface.h	2;"	d
+COMMAND_ID_H	DATA_STRUCTURES/message_command_id.h	2;"	d
+COMMAND_STANDART	DATA_STRUCTURES/message_command_structures.h	/^concept COMMAND_STANDART = requires(COMMAND_TYPE M) $/;"	v
+CONNECTION_INTERFACE_H	NETWORK_INTERFACES/connection_interface.h	2;"	d
+CallList	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    std::map<uint16_t,MessageCall> CallList;$/;"	m	class:MessageDispatcher
+CallList	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    std::vector<MessageCall> CallList;$/;"	m	class:MessageDispatcher
+Channel	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  Channel     = 1;$/;"	m	struct:CommandCalibration
+Chunked	RING_BUFFER/message_iterator_generic.h	/^enum class IteratorMode {Chunked = 0, ChunkedContinous = 1, Continous = 2};$/;"	m	class:IteratorMode
+ChunkedContinous	RING_BUFFER/message_iterator_generic.h	/^enum class IteratorMode {Chunked = 0, ChunkedContinous = 1, Continous = 2};$/;"	m	class:IteratorMode
+Comman	DATA_STRUCTURES/message_command_structures.h	/^struct CommandCloseConnection  { uint8_t Comman = 0xC6; uint8_t Param = 0; };$/;"	m	struct:CommandCloseConnection
+Command	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  Command     = 0xA1;$/;"	m	struct:CommandCalibration
+Command	DATA_STRUCTURES/message_command_structures.h	/^   std::pair<float,float> Command;$/;"	m	class:CommandAiming
+Command	DATA_STRUCTURES/message_command_structures.h	/^   std::pair<float,float> Command;$/;"	m	class:CommandSetPair
+Command	DATA_STRUCTURES/message_command_structures.h	/^  uint16_t Command = 0;$/;"	m	struct:CommandDevice
+Command	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Command  = 0xC5; uint8_t Param = 0; $/;"	m	struct:CommandCheckConnection
+Command	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Command = 0;$/;"	m	struct:CommandDeviceRedux
+Command	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Command = 0;$/;"	m	struct:RequestDeviceRedux
+Command	NETWORK_INTERFACES/engine_can_interface.h	/^  CommandSetPosScanator Command;$/;"	m	class:CANTestMessage
+CommandAiming	DATA_STRUCTURES/message_command_structures.h	/^   CommandAiming(){};$/;"	f	class:CommandAiming
+CommandAiming	DATA_STRUCTURES/message_command_structures.h	/^   CommandAiming(float x, float y): Command{x,y} {};$/;"	f	class:CommandAiming
+CommandAiming	DATA_STRUCTURES/message_command_structures.h	/^   CommandAiming(std::pair<float,float> pair): Command{pair} {};$/;"	f	class:CommandAiming
+CommandAiming	DATA_STRUCTURES/message_command_structures.h	/^class CommandAiming$/;"	c
+CommandCalibration	DATA_STRUCTURES/message_command_structures.h	/^struct CommandCalibration$/;"	s
+CommandCheckConnection	DATA_STRUCTURES/message_command_structures.h	/^struct CommandCheckConnection  $/;"	s
+CommandCloseConnection	DATA_STRUCTURES/message_command_structures.h	/^struct CommandCloseConnection  { uint8_t Comman = 0xC6; uint8_t Param = 0; };$/;"	s
+CommandDevice	DATA_STRUCTURES/message_command_structures.h	/^struct CommandDevice$/;"	s
+CommandDeviceRedux	DATA_STRUCTURES/message_command_structures.h	/^struct CommandDeviceRedux$/;"	s
+CommandDispatcherGeneric	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^class CommandDispatcherGeneric$/;"	c
+CommandJson	DATA_STRUCTURES/message_command_structures_rotary.h	/^class CommandJson$/;"	c	struct:DriveTX
+CommandLidControlJson	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^CommandLidControlJson::CommandLidControlJson(QString setting_str )$/;"	f	class:CommandLidControlJson
+CommandLidControlJson	DATA_STRUCTURES/message_command_structures_rotary.h	/^class CommandLidControlJson : public CommandJson$/;"	c	struct:DriveTX
+CommandSetPair	DATA_STRUCTURES/message_command_structures.h	/^   CommandSetPair() { Command.first = 0; Command.second = 0; }$/;"	f	class:CommandSetPair
+CommandSetPair	DATA_STRUCTURES/message_command_structures.h	/^   CommandSetPair(float value, float value2) { Command.first = value; Command.second = value2; }$/;"	f	class:CommandSetPair
+CommandSetPair	DATA_STRUCTURES/message_command_structures.h	/^class CommandSetPair$/;"	c
+CommandSetPairJson	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^CommandSetPairJson::CommandSetPairJson()$/;"	f	class:CommandSetPairJson
+CommandSetPairJson	DATA_STRUCTURES/message_command_structures_rotary.h	/^class CommandSetPairJson : public CommandJson$/;"	c	struct:DriveTX
+CommandType	DATA_STRUCTURES/message_command_structures.h	/^                 uint32_t CommandType = 0;$/;"	m	class:CommandAiming
+Connected	NETWORK_INTERFACES/engine_udp_interface.h	/^       bool Connected  = false;$/;"	m	class:UDPConnectionEngine
+ConnectionInterface	NETWORK_INTERFACES/connection_interface.h	/^  ConnectionInterface(QObject* parent = nullptr) : QObject(parent) {}; $/;"	f	class:ConnectionInterface
+ConnectionInterface	NETWORK_INTERFACES/connection_interface.h	/^class ConnectionInterface : public QObject$/;"	c
+Continous	RING_BUFFER/message_iterator_generic.h	/^enum class IteratorMode {Chunked = 0, ChunkedContinous = 1, Continous = 2};$/;"	m	class:IteratorMode
+ControlTX	DATA_STRUCTURES/message_command_structures_rotary.h	/^class ControlTX$/;"	c	struct:DriveTX
+CounterDispatchFail	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    int CounterDispatchFail = 0;$/;"	m	class:MessageDispatcher
+CurrentMessage	RING_BUFFER/engine_ring_buffer_generic.h	/^    MessageGeneric<void*,H_TYPE>* CurrentMessage = 0;$/;"	m	class:RingBufferGeneric
+DATA	GENERIC_MESSAGES/message_struct_generic.h	/^    T DATA; $/;"	m	class:MessageGeneric
+DATA	GENERIC_MESSAGES/message_struct_generic.h	/^    std::array<uint8_t,H::getMaxSizeStatic()> DATA;$/;"	m	class:MessageGeneric
+DATA	RING_BUFFER/engine_ring_buffer_generic.h	/^            uint8_t* DATA = new uint8_t[M_SIZE*M_NUM];$/;"	m	class:RingBufferGeneric
+DATA_AVAILABLE	RING_BUFFER/engine_ring_buffer_generic.h	/^    int DATA_AVAILABLE = 0;$/;"	m	class:RingBufferGeneric
+DATA_PASSED	RING_BUFFER/engine_ring_buffer_generic.h	/^    int DATA_PASSED = 0;$/;"	m	class:RingBufferGeneric
+DATA_SIZE	GENERIC_MESSAGES/message_header_generic.h	/^    uint32_t DATA_SIZE  = 1; $/;"	m	class:MESSAGE_HEADER_GENERIC
+DataAvailable	RING_BUFFER/message_iterator_generic.h	/^	 int DataAvailable()   { return PtrDataEnd - PtrMessageBegin; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+DataAvailable	RING_BUFFER/message_iterator_generic.h	/^	int  DataAvailable()  { return PtrDataEnd - PtrMessageBegin; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+DataAvailable	RING_BUFFER/message_iterator_generic.h	/^     int DataAvailable()   { return std::abs(this->PtrDataEnd - this->PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGeneric
+DataCounter	NETWORK_INTERFACES/engine_udp_interface.h	/^    int DataCounter = 0;$/;"	m	class:UDPConnectionEngine
+DataRemain	RING_BUFFER/message_iterator_generic.h	/^	 uint32_t DataRemain  = 0;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+Delay	NETWORK_INTERFACES/engine_can_interface.h	/^  std::chrono::microseconds Delay;$/;"	m	class:CANDelayMeasure
+DeviceID	DATA_STRUCTURES/message_command_structures.h	/^    uint8_t DeviceID = 0;$/;"	m	struct:RequestDevice
+DispatchMessages	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^void DispatchMessages(                MessageStorageInterface& Storage)$/;"	f	class:MessageDispatcher
+DispatchMessages	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^void DispatchMessages()$/;"	f	class:MessageDispatcher
+DispatchMessages	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^void DispatchMessages(std::shared_ptr<MessageStorageInterface> Storage)$/;"	f	class:MessageDispatcher
+DriveTX	DATA_STRUCTURES/message_command_structures_rotary.h	/^struct DriveTX$/;"	s
+ENGINE_UDP_INTERFACE_H	NETWORK_INTERFACES/engine_udp_interface.h	2;"	d
+EndMessageBuffer	RING_BUFFER/message_iterator_generic.h	/^		uint8_t* EndMessageBuffer;$/;"	m	struct:IteratorMode::MessageIteratorGenericBase::MessagesRange
+Engine1	DATA_STRUCTURES/message_command_structures_intermediate.h	/^  StateEngineControl Engine1;$/;"	m	struct:StateRotaryControl
+Engine2	DATA_STRUCTURES/message_command_structures_intermediate.h	/^  StateEngineControl Engine2;$/;"	m	struct:StateRotaryControl
+ExtractData	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    static T* ExtractData(MessageType* Message) { return &(reinterpret_cast<MessageGeneric<T,H>*>(Message)->DATA); }$/;"	f	class:MessageDispatcher
+ExtractData	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    static T* ExtractData(MessageType* Message) { return &(reinterpret_cast<MessageGeneric<T,MESSAGE_HEADER_GENERIC>*>(Message)->DATA); $/;"	f	class:MessageDispatcher
+FindHeader	RING_BUFFER/message_iterator_generic.h	/^	bool FindHeader(uint8_t* DataSourceEnd   , uint16_t SearchDepth)$/;"	f	class:IteratorMode::MessageIteratorGeneric
+GetHeader	RING_BUFFER/message_iterator_generic.h	/^	  H& GetHeader()     { return *reinterpret_cast<H*>(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetHeader	RING_BUFFER/message_iterator_generic.h	/^	  H& GetHeader(uint8_t* PtrHeader) { return *reinterpret_cast<H*>(PtrHeader); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetHeader	RING_BUFFER/message_iterator_generic.h	/^	 H& GetHeader()     { return *reinterpret_cast<H*>(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetHeader	RING_BUFFER/message_iterator_generic.h	/^	 H& GetHeader(uint8_t* PtrHeader) { return *reinterpret_cast<H*>(PtrHeader); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetHeaderPtr	RING_BUFFER/message_iterator_generic.h	/^	  H* GetHeaderPtr()  { return  reinterpret_cast<H*>(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetHeaderPtr	RING_BUFFER/message_iterator_generic.h	/^	 H* GetHeaderPtr()  { return  reinterpret_cast<H*>(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetMaxTypeSize	DATA_STRUCTURES/engine_type_register.h	/^      static constexpr int GetMaxTypeSize(const std::array<int,100> SIZES_STORE) $/;"	f	class:TypeRegisterSizes
+GetMaxTypeSize	DATA_STRUCTURES/engine_type_register.h	/^      template<int OFFSET> static constexpr int GetMaxTypeSize() { return TypeRegisterSizes<OFFSET>::MaxSize; } $/;"	f	class:TypeRegister
+GetMessagePtr	RING_BUFFER/message_iterator_generic.h	/^	     MessageGeneric<void*,H>* GetMessagePtr() { return reinterpret_cast<MessageGeneric<void*,H>* >(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetMessagePtr	RING_BUFFER/message_iterator_generic.h	/^	MessageGeneric<void*,H>* GetMessagePtr() { return reinterpret_cast<MessageGeneric<void*,H>* >(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+GetMinTypeSize	DATA_STRUCTURES/engine_type_register.h	/^      static constexpr int GetMinTypeSize(const std::array<int,100> SIZES_STORE) $/;"	f	class:TypeRegisterSizes
+GetMinTypeSize	DATA_STRUCTURES/engine_type_register.h	/^      template<int OFFSET> static constexpr int GetMinTypeSize() { return TypeRegisterSizes<OFFSET>::MinSize; } $/;"	f	class:TypeRegister
+GetSize	GENERIC_MESSAGES/message_struct_generic.h	/^                   int GetSize()        { return H::getMaxSize(); };$/;"	f	class:MessageGeneric
+GetSize	GENERIC_MESSAGES/message_struct_generic.h	/^                   int GetSize()        { return HEADER.getMessageSize();  };$/;"	f	class:MessageGeneric
+GetSize	GENERIC_MESSAGES/message_struct_generic.h	/^                   int GetSize()       { return HEADER.DATA_SIZE + sizeof(H);  };$/;"	f	class:MessageGeneric
+GetSizeMessage	GENERIC_MESSAGES/message_struct_generic.h	/^  constexpr static int GetSizeMessage() { return H::getMaxSize(); };$/;"	f	class:MessageGeneric
+GetSizeMessage	GENERIC_MESSAGES/message_struct_generic.h	/^  constexpr static int GetSizeMessage() { return sizeof(MessageGeneric<T,H>); };$/;"	f	class:MessageGeneric
+GetTypeCount	DATA_STRUCTURES/engine_type_register.h	/^          static int GetTypeCount() { return TypeRegisterID<>::countTypes();}$/;"	f	class:TypeRegister
+GetTypeID	DATA_STRUCTURES/engine_type_register.h	/^          static int GetTypeID()   { return TYPE_ID;}$/;"	f	class:TypeRegister
+GetTypeName	DATA_STRUCTURES/engine_type_register.h	/^          static QString GetTypeName() { return typeid(T).name();}$/;"	f	class:TypeRegister
+GetTypeSize	DATA_STRUCTURES/engine_type_register.h	/^constexpr static int GetTypeSize() { return sizeof(T);}$/;"	f	class:TypeRegister
+HAS_ANY_MESSAGE_FUNC	GENERIC_MESSAGES/message_struct_generic.h	/^template<typename T> concept HAS_ANY_MESSAGE_FUNC = requires(T H) $/;"	v
+HAS_COMMAND_FIELD	DATA_STRUCTURES/message_command_structures.h	/^template<typename T> concept HAS_COMMAND_FIELD = requires(T t) { t.Command; };$/;"	v
+HAS_DATA_SIZE_FIELD	GENERIC_MESSAGES/message_struct_generic.h	/^template<typename T> concept HAS_DATA_SIZE_FIELD = requires(T t) { t.DATA_SIZE; };$/;"	v
+HAS_MAX_SIZE	GENERIC_MESSAGES/message_struct_generic.h	/^template<typename T> concept HAS_MAX_SIZE = requires(T t) $/;"	v
+HAS_PARAM_FIELD	DATA_STRUCTURES/message_command_structures.h	/^template<typename T> concept HAS_PARAM_FIELD = requires(T t) { t.Param1; };$/;"	v
+HEADER	GENERIC_MESSAGES/message_header_generic.h	/^    uint16_t HEADER = 0x8220; $/;"	m	class:MESSAGE_HEADER_GENERIC
+HEADER	GENERIC_MESSAGES/message_struct_generic.h	/^    H HEADER;$/;"	m	class:MessageGeneric
+HEADER	GENERIC_MESSAGES/message_struct_generic.h	/^    static H HEADER;$/;"	m	class:MessageGeneric
+HEADER	GENERIC_MESSAGES/message_struct_generic.h	/^template<typename T, HEADER_VARIABLE H> H MessageGeneric<T,H>::HEADER;$/;"	m	class:MessageGeneric
+HEADER_GENERIC	GENERIC_MESSAGES/message_struct_generic.h	/^concept HEADER_GENERIC = requires(HEADER_TYPE H) $/;"	v
+HEADER_STANDART	GENERIC_MESSAGES/message_struct_generic.h	/^concept HEADER_STANDART = requires(HEADER_TYPE H) $/;"	v
+HEADER_VARIABLE	GENERIC_MESSAGES/message_struct_generic.h	/^concept HEADER_VARIABLE = requires(HEADER_TYPE H) $/;"	v
+HeaderCurrent	RING_BUFFER/message_iterator_generic.h	/^	   H* HeaderCurrent     = nullptr;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+HeaderMarker	RING_BUFFER/message_iterator_generic.h	/^		   uint8_t HeaderMarker = H::getHeaderMarker();$/;"	m	class:IteratorMode::MessageIteratorGeneric
+HeaderSearchDepth	RING_BUFFER/message_iterator_generic.h	/^	      uint8_t HeaderSearchDepth = MessageIteratorGenericBase<H>::BufferChunkSize\/4;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+IPLocal	NETWORK_INTERFACES/engine_tcp_interface.h	/^    QString IPLocal = "127.0.0.1";$/;"	m	class:TCPConnectionEngine
+IPRemote	NETWORK_INTERFACES/engine_tcp_interface.h	/^    QString IPRemote = "127.0.0.1";$/;"	m	class:TCPConnectionEngine
+IPRemote	NETWORK_INTERFACES/engine_udp_interface.h	/^    QString IPRemote;$/;"	m	class:UDPConnectionEngine
+IncommingPointer	RING_BUFFER/engine_ring_buffer_generic.h	/^	MessageIteratorGeneric<H_TYPE,IT_MODE> IncommingPointer;$/;"	m	class:RingBufferGeneric
+IsHeaderValid	RING_BUFFER/message_iterator_generic.h	/^	bool IsHeaderValid()  { return GetHeader().isValid(); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+IsHeaderValid	RING_BUFFER/message_iterator_generic.h	/^    bool IsHeaderValid()  { return GetHeader().isValid(); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+IsMemoryAtEnd	RING_BUFFER/message_iterator_generic.h	/^    bool IsMemoryAtEnd()   { return (this->PtrBufferEnd - this->PtrMessageBegin) < 2*this->BufferChunkSize; }$/;"	f	class:IteratorMode::MessageIteratorGeneric
+IteratorMode	RING_BUFFER/message_iterator_generic.h	/^enum class IteratorMode {Chunked = 0, ChunkedContinous = 1, Continous = 2};$/;"	c
+LASER_BEAM_OFF	DATA_STRUCTURES/message_command_structures.h	264;"	d
+LASER_BEAM_ON	DATA_STRUCTURES/message_command_structures.h	263;"	d
+LASER_CHECK	DATA_STRUCTURES/message_command_structures.h	258;"	d
+LASER_FAULT	DATA_STRUCTURES/message_command_structures.h	268;"	d
+LASER_MODULE	DATA_STRUCTURES/message_command_structures.h	270;"	d
+LASER_MODULE_BEAM	DATA_STRUCTURES/message_command_structures.h	271;"	d
+LASER_MODULE_PILOT	DATA_STRUCTURES/message_command_structures.h	272;"	d
+LASER_MODULE_POWER	DATA_STRUCTURES/message_command_structures.h	273;"	d
+LASER_OFF	DATA_STRUCTURES/message_command_structures.h	260;"	d
+LASER_ON	DATA_STRUCTURES/message_command_structures.h	259;"	d
+LASER_PILOT_OFF	DATA_STRUCTURES/message_command_structures.h	266;"	d
+LASER_PILOT_ON	DATA_STRUCTURES/message_command_structures.h	265;"	d
+LASER_SET_POWER	DATA_STRUCTURES/message_command_structures.h	262;"	d
+LastMessage	RING_BUFFER/message_iterator_generic.h	/^		uint8_t* LastMessage;$/;"	m	struct:IteratorMode::MessageIteratorGenericBase::MessagesRange
+Limits	DATA_STRUCTURES/message_command_structures_intermediate.h	/^    uint32_t Limits[3];$/;"	m	struct:StateEngineControl
+LinkedDispatcher	RING_BUFFER/message_storage_interface.h	/^    std::shared_ptr<MessageDispatcherInterface> LinkedDispatcher = nullptr;$/;"	m	class:MessageStorageInterface
+LinkedStorage	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	/^   std::shared_ptr<MessageStorageInterface> LinkedStorage = nullptr;$/;"	m	class:MessageDispatcherInterface
+MAX_MESSAGE_IN_STORE	RING_BUFFER/engine_ring_buffer_generic.h	/^    int MAX_MESSAGE_IN_STORE = M_NUM-2;$/;"	m	class:RingBufferGeneric
+MESSAGE_AVAILABLE	RING_BUFFER/engine_ring_buffer_generic.h	/^    int MESSAGE_AVAILABLE = 0;$/;"	m	class:RingBufferGeneric
+MESSAGE_DISPATCHER_EXT_H	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	2;"	d
+MESSAGE_DISPATCHER_INTERFACE_H	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	2;"	d
+MESSAGE_HEADER_EXT	GENERIC_MESSAGES/message_header_generic_ext.h	/^class MESSAGE_HEADER_EXT : public MESSAGE_HEADER_GENERIC$/;"	c
+MESSAGE_HEADER_GENERIC	GENERIC_MESSAGES/message_header_generic.h	/^class MESSAGE_HEADER_GENERIC$/;"	c
+MESSAGE_HEADER_GENERIC_EXT_H	GENERIC_MESSAGES/message_header_generic_ext.h	2;"	d
+MESSAGE_HEADER_GENERIC_H	GENERIC_MESSAGES/message_header_generic.h	2;"	d
+MESSAGE_HEADER_ROTARY	DATA_STRUCTURES/message_command_structures_rotary.h	/^struct MESSAGE_HEADER_ROTARY$/;"	s	struct:DriveTX
+MESSAGE_HEADER_ROTARY_JSON	DATA_STRUCTURES/message_command_structures_rotary.h	/^struct MESSAGE_HEADER_ROTARY_JSON$/;"	s	struct:DriveTX
+MESSAGE_IDENT	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint16_t  MESSAGE_IDENT = 0x7B22;  \/\/ идентификатор пакета$/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+MESSAGE_IDENT	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint16_t  MESSAGE_IDENT = 0xB001;  $/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY
+MESSAGE_IDENT	GENERIC_MESSAGES/message_header_generic.h	/^    uint16_t MESSAGE_IDENT = 1; $/;"	m	class:MESSAGE_HEADER_GENERIC
+MESSAGE_ITERATOR_GENERIC_H	RING_BUFFER/message_iterator_generic.h	2;"	d
+MESSAGE_NUMBER	GENERIC_MESSAGES/message_header_generic.h	/^    uint32_t MESSAGE_NUMBER = 0x0; $/;"	m	class:MESSAGE_HEADER_GENERIC
+MESSAGE_PASSED	RING_BUFFER/engine_ring_buffer_generic.h	/^    int MESSAGE_PASSED = 0;$/;"	m	class:RingBufferGeneric
+MESSAGE_STORAGE_INTERFACE_H	RING_BUFFER/message_storage_interface.h	2;"	d
+MESSAGE_STRUCT_GENERIC_H	GENERIC_MESSAGES/message_struct_generic_ext.h	2;"	d
+M_POS	DATA_STRUCTURES/message_command_structures_rotary.h	/^   enum class Modes{M_POS = 1, M_VEL = 2};$/;"	m	class:DriveTX::Modes
+M_VEL	DATA_STRUCTURES/message_command_structures_rotary.h	/^   enum class Modes{M_POS = 1, M_VEL = 2};$/;"	m	class:DriveTX::Modes
+MaxSize	DATA_STRUCTURES/engine_type_register.h	/^      static constexpr int MaxSize = GetMaxTypeSize(SIZES); $/;"	m	class:TypeRegisterSizes
+MemoryAvailable	RING_BUFFER/message_iterator_generic.h	/^     int MemoryAvailable() { return (this->PtrBufferEnd - this->PtrMessageBegin) - 2*this->BufferChunkSize; }$/;"	f	class:IteratorMode::MessageIteratorGeneric
+MessageDataSize	RING_BUFFER/message_iterator_generic.h	/^	uint16_t  MessageDataSize = 25;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+MessageDataSize	RING_BUFFER/message_iterator_generic.h	/^	uint8_t  MessageDataSize = 25;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+MessageDispatcher	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    MessageDispatcher() { CallList.resize(0x300); std::fill(CallList.begin(), CallList.end(), nullptr);}$/;"	f	class:MessageDispatcher
+MessageDispatcher	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^    MessageDispatcher() { }$/;"	f	class:MessageDispatcher
+MessageDispatcher	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^class MessageDispatcher : public MessageDispatcherInterface$/;"	c
+MessageDispatcher	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^class MessageDispatcher<MESSAGE_HEADER_GENERIC, BufferType> : public MessageDispatcherInterface$/;"	c
+MessageDispatcherInterface	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	/^class MessageDispatcherInterface$/;"	c
+MessageGeneric	GENERIC_MESSAGES/message_struct_generic.h	/^    MessageGeneric() $/;"	f	class:MessageGeneric
+MessageGeneric	GENERIC_MESSAGES/message_struct_generic.h	/^    MessageGeneric()$/;"	f	class:MessageGeneric
+MessageGeneric	GENERIC_MESSAGES/message_struct_generic.h	/^class MessageGeneric$/;"	c
+MessageGeneric	GENERIC_MESSAGES/message_struct_generic.h	/^class MessageGeneric<T,H>$/;"	c
+MessageGenericExt	GENERIC_MESSAGES/message_struct_generic_ext.h	/^MessageGenericExt<T,H>::MessageGenericExt() $/;"	f	class:MessageGenericExt
+MessageGenericExt	GENERIC_MESSAGES/message_struct_generic_ext.h	/^class MessageGenericExt : public MessageGeneric<T,H>$/;"	c
+MessageGeneric_H	GENERIC_MESSAGES/message_struct_generic.h	2;"	d
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric(): MessageIteratorGenericBase<H>()       {};$/;"	f	class:IteratorMode::MessageIteratorGeneric
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric(): MessageIteratorGenericBase<H>() {};$/;"	f	class:IteratorMode::MessageIteratorGeneric
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric(uint8_t* STORAGE, uint16_t ChunkSize, uint16_t NumberChunks) :$/;"	f	class:IteratorMode::MessageIteratorGeneric
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric(uint8_t* STORAGE, uint16_t ChunkSize, uint16_t NumberChunks): $/;"	f	class:IteratorMode::MessageIteratorGeneric
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^class MessageIteratorGeneric : public MessageIteratorGenericBase<H> $/;"	c	class:IteratorMode
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^class MessageIteratorGeneric<H,IteratorMode::ChunkedContinous> : public MessageIteratorGenericBase<H> $/;"	c	class:IteratorMode
+MessageIteratorGeneric	RING_BUFFER/message_iterator_generic.h	/^class MessageIteratorGeneric<H,IteratorMode::Continous> : public MessageIteratorGenericBase<H> $/;"	c	class:IteratorMode
+MessageIteratorGenericBase	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGenericBase() { PtrBufferBegin = 0; PtrBufferEnd = 0; PtrMessageBegin = 0; PtrDataEnd = 0; } \/\/qDebug() << "[ CREATE ITERATOR TO STANDART DATA ]"; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageIteratorGenericBase	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGenericBase() { PtrBufferBegin = 0; PtrBufferEnd = 0; PtrMessageBegin = 0; PtrDataEnd = 0; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageIteratorGenericBase	RING_BUFFER/message_iterator_generic.h	/^MessageIteratorGenericBase<H>::MessageIteratorGenericBase(uint8_t* STORAGE, uint16_t ChunkSize, uint16_t NumberChunks)$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageIteratorGenericBase	RING_BUFFER/message_iterator_generic.h	/^class MessageIteratorGenericBase$/;"	c	class:IteratorMode
+MessageIteratorGenericBase	RING_BUFFER/message_iterator_generic.h	/^class MessageIteratorGenericBase<H>$/;"	c	class:IteratorMode
+MessageNumber	RING_BUFFER/message_iterator_generic.h	/^	uint32_t MessageNumber = 0;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+MessagePointer	RING_BUFFER/engine_ring_buffer_generic.h	/^	MessageIteratorGeneric<H_TYPE,IT_MODE> MessagePointer;$/;"	m	class:RingBufferGeneric
+MessageRotaryStateJson	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^MessageRotaryStateJson::MessageRotaryStateJson() $/;"	f	class:MessageRotaryStateJson
+MessageRotaryStateJson	DATA_STRUCTURES/message_command_structures_rotary.h	/^class MessageRotaryStateJson : public CommandJson$/;"	c	struct:DriveTX
+MessageSize	RING_BUFFER/message_iterator_generic.h	/^		  uint32_t MessageSize = 0;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+MessageSize	RING_BUFFER/message_iterator_generic.h	/^template<HEADER_STANDART H> int MessageIteratorGenericBase<H>::MessageSize()      $/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageSize	RING_BUFFER/message_iterator_generic.h	/^template<HEADER_STANDART H> int MessageIteratorGenericBase<H>::MessageSize(uint8_t* PtrMessage)$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageSize	RING_BUFFER/message_iterator_generic.h	/^template<typename H> int MessageIteratorGenericBase<H>::MessageSize()      $/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageSize	RING_BUFFER/message_iterator_generic.h	/^template<typename H> int MessageIteratorGenericBase<H>::MessageSize(uint8_t* PtrMessage)$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+MessageStorage	NETWORK_INTERFACES/connection_interface.h	/^  std::shared_ptr<MessageStorageInterface> MessageStorage = nullptr;$/;"	m	class:ConnectionInterface
+MessageStorageInterface	RING_BUFFER/message_storage_interface.h	/^class MessageStorageInterface$/;"	c
+MessagesRange	RING_BUFFER/message_iterator_generic.h	/^	struct MessagesRange$/;"	s	class:IteratorMode::MessageIteratorGenericBase
+MinSize	DATA_STRUCTURES/engine_type_register.h	/^      static constexpr int MinSize = GetMinTypeSize(SIZES); $/;"	m	class:TypeRegisterSizes
+Mode	DATA_STRUCTURES/message_command_structures_intermediate.h	/^    uint8_t Mode;$/;"	m	struct:StateEngineControl
+Modes	DATA_STRUCTURES/message_command_structures_rotary.h	/^   enum class Modes{M_POS = 1, M_VEL = 2};$/;"	c	struct:DriveTX
+Module	DATA_STRUCTURES/message_command_structures.h	/^    uint8_t Module = 0;$/;"	m	struct:RequestDevice
+ModuleID	DATA_STRUCTURES/message_command_structures.h	/^  uint16_t ModuleID = 0;$/;"	m	struct:CommandDevice
+MoveDataToBegin	RING_BUFFER/message_iterator_generic.h	/^    void MessageIteratorGeneric<H,IteratorMode::Continous>::MoveDataToBegin()$/;"	f	class:IteratorMode::MessageIteratorGeneric
+NodeType	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  NodeType    = 0xA0;$/;"	m	struct:CommandCalibration
+NumberSteps	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  NumberSteps   = 1;$/;"	m	struct:CommandCalibration
+Param	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Command  = 0xC5; uint8_t Param = 0; $/;"	m	struct:CommandCheckConnection
+Param	DATA_STRUCTURES/message_command_structures.h	/^  union Param$/;"	u	struct:CommandDevice
+Param	DATA_STRUCTURES/message_command_structures.h	/^struct CommandCloseConnection  { uint8_t Comman = 0xC6; uint8_t Param = 0; };$/;"	m	struct:CommandCloseConnection
+Param1	DATA_STRUCTURES/message_command_structures.h	/^    T Param1; $/;"	m	struct:RequestStateExtended
+Param1	DATA_STRUCTURES/message_command_structures.h	/^   T Param1 = 0;$/;"	m	struct:RequestState
+Param1	DATA_STRUCTURES/message_command_structures.h	/^   uint16_t Param1 = 0;$/;"	m	struct:RequestDevice
+Param1	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Param1 = 0;$/;"	m	struct:CommandDeviceRedux
+Param1	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Param1 = 0;$/;"	m	struct:RequestDeviceRedux
+Param2	DATA_STRUCTURES/message_command_structures.h	/^    T Param2; $/;"	m	struct:RequestStateExtended
+Param2	DATA_STRUCTURES/message_command_structures.h	/^   T Param2 = 0;$/;"	m	struct:RequestState
+Param2	DATA_STRUCTURES/message_command_structures.h	/^   uint16_t Param2 = 0;$/;"	m	struct:RequestDevice
+Param2	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param2 = 0x00;$/;"	m	class:DriveTX::Modes
+Param3	DATA_STRUCTURES/message_command_structures.h	/^    T Param3; $/;"	m	struct:RequestStateExtended
+Param3	DATA_STRUCTURES/message_command_structures.h	/^   T Param3 = 1;$/;"	m	struct:RequestState
+Param3	DATA_STRUCTURES/message_command_structures.h	/^   uint16_t Param3 = 0;$/;"	m	struct:RequestDevice
+Param3	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param3 = 0x00;$/;"	m	class:DriveTX::Modes
+Param4	DATA_STRUCTURES/message_command_structures.h	/^    T Param4; $/;"	m	struct:RequestStateExtended
+Param4	DATA_STRUCTURES/message_command_structures.h	/^   T Param4 = 1;$/;"	m	struct:RequestState
+Param4	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param4 = 0x00;$/;"	m	class:DriveTX::Modes
+Param5	DATA_STRUCTURES/message_command_structures.h	/^    T Param5; $/;"	m	struct:RequestStateExtended
+Param5	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param5 = 0xA0;$/;"	m	class:DriveTX::Modes
+Param6	DATA_STRUCTURES/message_command_structures.h	/^    T Param6; $/;"	m	struct:RequestStateExtended
+Param6	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param6 = 0x0F;$/;"	m	class:DriveTX::Modes
+Param7	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param7 = 0x00;$/;"	m	class:DriveTX::Modes
+Param8	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t Param8 = 0x00;$/;"	m	class:DriveTX::Modes
+ParamFloat	DATA_STRUCTURES/message_command_structures.h	/^     float ParamFloat;$/;"	m	union:CommandDevice::Param
+ParamInt	DATA_STRUCTURES/message_command_structures.h	/^  uint32_t ParamInt = 0;$/;"	m	union:CommandDevice::Param
+PeriodProcess	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  PeriodProcess = 1;$/;"	m	struct:CommandCalibration
+Port	NETWORK_INTERFACES/engine_uart_interface.h	/^QSerialPort Port;$/;"	m	class:UARTConnectionEngine
+PortLocal	NETWORK_INTERFACES/engine_tcp_interface.h	/^        int PortLocal = 2325;$/;"	m	class:TCPConnectionEngine
+PortLocal	NETWORK_INTERFACES/engine_udp_interface.h	/^        int PortLocal  = 7575;$/;"	m	class:UDPConnectionEngine
+PortRemote	NETWORK_INTERFACES/engine_tcp_interface.h	/^        int PortRemote = 2325;$/;"	m	class:TCPConnectionEngine
+PortRemote	NETWORK_INTERFACES/engine_udp_interface.h	/^        int PortRemote = 7575;$/;"	m	class:UDPConnectionEngine
+Position	DATA_STRUCTURES/message_command_structures_intermediate.h	/^    float Position;$/;"	m	struct:StateEngineControl
+PrintIterator	RING_BUFFER/message_iterator_generic.h	/^void MessageIteratorGenericBase<H>::PrintIterator()$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+PtrBufferBegin	RING_BUFFER/message_iterator_generic.h	/^	uint8_t* PtrBufferBegin;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+PtrBufferEnd	RING_BUFFER/message_iterator_generic.h	/^	uint8_t* PtrBufferEnd;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+PtrDataEnd	RING_BUFFER/message_iterator_generic.h	/^	uint8_t* PtrDataEnd = 0;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+PtrMessageBegin	RING_BUFFER/message_iterator_generic.h	/^	uint8_t* PtrMessageBegin;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+PtrNextHeader	RING_BUFFER/message_iterator_generic.h	/^	      uint8_t* PtrNextHeader = nullptr;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+RESERVE	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint16_t  RESERVE       = 0xCCCC;        $/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY
+RESERVE1	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint16_t  RESERVE1 = 0x6964;        \/\/ резервное поле данных$/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+RESERVE2	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint16_t  RESERVE2 = 0x223A;        \/\/ резервное поле данных$/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+RESERVE3	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint16_t  RESERVE3 = 0x3132;        \/\/ резервное поле данных$/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+RING_BUFFER_GENERIC_H	RING_BUFFER/engine_ring_buffer_generic.h	2;"	d
+RangeLimits	RING_BUFFER/message_iterator_generic.h	/^	MessagesRange RangeLimits;$/;"	m	class:IteratorMode::MessageIteratorGenericBase
+RawData	GENERIC_MESSAGES/message_header_generic_ext.cpp	/^QByteArray MESSAGE_HEADER_EXT::RawData;/;"	m	class:MESSAGE_HEADER_EXT	file:
+RawData	GENERIC_MESSAGES/message_header_generic_ext.h	/^    static QByteArray RawData;$/;"	m	class:MESSAGE_HEADER_EXT
+RawData	GENERIC_MESSAGES/message_struct_generic_ext.h	/^  static QByteArray RawData;$/;"	m	class:MessageGenericExt
+RawData	GENERIC_MESSAGES/message_struct_generic_ext.h	/^template<typename T,typename H> QByteArray MessageGenericExt<T,H>::RawData;$/;"	m	class:MessageGenericExt
+RequestDevice	DATA_STRUCTURES/message_command_structures.h	/^struct RequestDevice$/;"	s
+RequestDeviceRedux	DATA_STRUCTURES/message_command_structures.h	/^struct RequestDeviceRedux$/;"	s
+RequestState	DATA_STRUCTURES/message_command_structures.h	/^struct RequestState$/;"	s
+RequestStateExtended	DATA_STRUCTURES/message_command_structures.h	/^struct RequestStateExtended$/;"	s
+Reserv1	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv1 = 0;$/;"	m	struct:CommandDeviceRedux
+Reserv1	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv1 = 0;$/;"	m	struct:RequestDeviceRedux
+Reserv2	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv2 = 0;$/;"	m	struct:CommandDeviceRedux
+Reserv2	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv2 = 0;$/;"	m	struct:RequestDeviceRedux
+Reserv3	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv3 = 0;$/;"	m	struct:CommandDeviceRedux
+Reserv3	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv3 = 0;$/;"	m	struct:RequestDeviceRedux
+Reserv4	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv4 = 0;$/;"	m	struct:CommandDeviceRedux
+Reserv4	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv4 = 0;$/;"	m	struct:RequestDeviceRedux
+Reserv5	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv5 = 0;$/;"	m	struct:CommandDeviceRedux
+Reserv5	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv5 = 0;$/;"	m	struct:RequestDeviceRedux
+Reserv6	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv6 = 0;$/;"	m	struct:CommandDeviceRedux
+Reserv6	DATA_STRUCTURES/message_command_structures.h	/^  uint8_t Reserv6 = 0;$/;"	m	struct:RequestDeviceRedux
+Reserve3	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  Reserve3      = 1;$/;"	m	struct:CommandCalibration
+ResetIterator	RING_BUFFER/message_iterator_generic.h	/^	void ResetIterator()  { PtrMessageBegin = PtrBufferBegin; PtrDataEnd = PtrBufferBegin; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+RingBufferGeneric	RING_BUFFER/engine_ring_buffer_generic.h	/^RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::RingBufferGeneric() :$/;"	f	class:RingBufferGeneric
+RingBufferGeneric	RING_BUFFER/engine_ring_buffer_generic.h	/^class RingBufferGeneric : public MessageStorageInterface$/;"	c
+Server	NETWORK_INTERFACES/engine_tcp_interface.h	/^  QTcpServer* Server = 0;$/;"	m	class:TCPConnectionEngine
+Socket	NETWORK_INTERFACES/engine_tcp_interface.h	/^  QTcpSocket* Socket = 0;$/;"	m	class:TCPConnectionEngine
+Socket	NETWORK_INTERFACES/engine_udp_interface.h	/^   QUdpSocket* Socket = nullptr;$/;"	m	class:UDPConnectionEngine
+SpaceAvailable	RING_BUFFER/message_iterator_generic.h	/^	 uint32_t SpaceAvailable = 0;$/;"	m	class:IteratorMode::MessageIteratorGeneric
+State1	DATA_STRUCTURES/message_command_structures.h	/^    uint32_t State1; $/;"	m	struct:RequestStateExtended
+State2	DATA_STRUCTURES/message_command_structures.h	/^    uint32_t State2; $/;"	m	struct:RequestStateExtended
+State3	DATA_STRUCTURES/message_command_structures.h	/^    uint32_t State3; $/;"	m	struct:RequestStateExtended
+State4	DATA_STRUCTURES/message_command_structures.h	/^    uint32_t State4; $/;"	m	struct:RequestStateExtended
+State5	DATA_STRUCTURES/message_command_structures.h	/^    uint32_t State5; $/;"	m	struct:RequestStateExtended
+State6	DATA_STRUCTURES/message_command_structures.h	/^    uint32_t State6; $/;"	m	struct:RequestStateExtended
+StateEngineControl	DATA_STRUCTURES/message_command_structures_intermediate.h	/^struct StateEngineControl$/;"	s
+StateRotaryControl	DATA_STRUCTURES/message_command_structures_intermediate.h	/^struct StateRotaryControl$/;"	s
+StepsTo	RING_BUFFER/message_iterator_generic.h	/^	 int StepsTo(const MessageIteratorGenericBase<H>& It) { return It.MessageNumber - MessageNumber;}; $/;"	f	class:IteratorMode::MessageIteratorGenericBase
+StepsTo	RING_BUFFER/message_iterator_generic.h	/^	int StepsTo(const MessageIteratorGenericBase<H>& It) { return It.MessageNumber - MessageNumber;}; $/;"	f	class:IteratorMode::MessageIteratorGenericBase
+SwitchToNext	RING_BUFFER/message_iterator_generic.h	/^void MessageIteratorGenericBase<H>::SwitchToNext()$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+SystemState	DATA_STRUCTURES/message_command_structures_rotary.h	/^struct SystemState$/;"	s
+TCPConnectionEngine	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^TCPConnectionEngine::TCPConnectionEngine(QObject *parent)$/;"	f	class:TCPConnectionEngine
+TCPConnectionEngine	NETWORK_INTERFACES/engine_tcp_interface.h	/^class TCPConnectionEngine : public ConnectionInterface$/;"	c
+TCP_ENGINE_INTERFACE_H	NETWORK_INTERFACES/engine_tcp_interface.h	2;"	d
+TIME	DATA_STRUCTURES/message_command_structures_rotary.h	/^  TimeStamp TIME;                    $/;"	m	struct:DriveTX::MESSAGE_HEADER_ROTARY
+TYPES	DATA_STRUCTURES/engine_type_register.h	/^      static std::array<int,100> TYPES;$/;"	m	class:TypeRegisterID
+TYPES	DATA_STRUCTURES/engine_type_register.h	/^template<int NUM> std::array<int,100> TypeRegisterID<NUM>::TYPES;$/;"	m	class:TypeRegisterID
+TYPES_INFO	DATA_STRUCTURES/engine_type_register.h	/^      static TypeRegisterInfo<0> TYPES_INFO;$/;"	m	class:TypeRegister
+TYPES_INFO	DATA_STRUCTURES/engine_type_register.h	/^template<typename T> TypeRegisterInfo<0> TypeRegister<T>::TYPES_INFO;$/;"	m	class:TypeRegister
+TYPE_ID	DATA_STRUCTURES/engine_type_register.h	/^      static constinit const int TYPE_ID;$/;"	m	class:TypeRegister
+TYPE_REGISTER_ENGINE_H	DATA_STRUCTURES/engine_type_register.h	2;"	d
+TimeMeasure	DATA_STRUCTURES/message_command_structures.h	/^    uint16_t  TimeMeasure   = 1;$/;"	m	struct:CommandCalibration
+TimeStamp	DATA_STRUCTURES/message_command_structures_rotary.h	/^struct TimeStamp$/;"	s
+TimerAutoconnection	NETWORK_INTERFACES/engine_tcp_interface.h	/^  QTimer      TimerAutoconnection;$/;"	m	class:TCPConnectionEngine
+TypeMaxSize	DATA_STRUCTURES/engine_type_register.h	/^      static int TypeMaxSize; $/;"	m	class:TypeRegisterInfo
+TypeMaxSize	DATA_STRUCTURES/engine_type_register.h	/^template<int NUM> int TypeRegisterInfo<NUM>::TypeMaxSize; $/;"	m	class:TypeRegisterInfo
+TypeMinSize	DATA_STRUCTURES/engine_type_register.h	/^      static int TypeMinSize; $/;"	m	class:TypeRegisterInfo
+TypeMinSize	DATA_STRUCTURES/engine_type_register.h	/^template<int NUM> int TypeRegisterInfo<NUM>::TypeMinSize; $/;"	m	class:TypeRegisterInfo
+TypeRegister	DATA_STRUCTURES/engine_type_register.h	/^class TypeRegister$/;"	c
+TypeRegisterID	DATA_STRUCTURES/engine_type_register.h	/^class TypeRegisterID $/;"	c
+TypeRegisterInfo	DATA_STRUCTURES/engine_type_register.h	/^class TypeRegisterInfo$/;"	c
+TypeRegisterSizes	DATA_STRUCTURES/engine_type_register.h	/^class TypeRegisterSizes$/;"	c
+UARTConnectionEngine	NETWORK_INTERFACES/engine_uart_interface.cpp	/^UARTConnectionEngine::UARTConnectionEngine(QObject *parent)$/;"	f	class:UARTConnectionEngine
+UARTConnectionEngine	NETWORK_INTERFACES/engine_uart_interface.h	/^class UARTConnectionEngine : public ConnectionInterface$/;"	c
+UART_ENGINE_INTERFACE_H	NETWORK_INTERFACES/engine_uart_interface.h	2;"	d
+UDPConnectionEngine	NETWORK_INTERFACES/engine_udp_interface.cpp	/^UDPConnectionEngine::UDPConnectionEngine(QObject* parent) : ConnectionInterface(parent)$/;"	f	class:UDPConnectionEngine
+UDPConnectionEngine	NETWORK_INTERFACES/engine_udp_interface.cpp	/^UDPConnectionEngine::UDPConnectionEngine(QString IPDevice, int Port, QString IPListen, int PortLocal, QObject *parent)$/;"	f	class:UDPConnectionEngine
+UDPConnectionEngine	NETWORK_INTERFACES/engine_udp_interface.cpp	/^UDPConnectionEngine::UDPConnectionEngine(QString IPDevice, int Port,QHostAddress::SpecialAddress IPListen, int PortLocal, QObject *parent)$/;"	f	class:UDPConnectionEngine
+UDPConnectionEngine	NETWORK_INTERFACES/engine_udp_interface.h	/^class UDPConnectionEngine : public ConnectionInterface$/;"	c
+Velocity	DATA_STRUCTURES/message_command_structures_intermediate.h	/^    float Velocity; $/;"	m	struct:StateEngineControl
+appendData	RING_BUFFER/engine_ring_buffer_generic.h	/^void RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::appendData(uint8_t* Data, uint16_t Size)$/;"	f	class:RingBufferGeneric
+appendTypeID	DATA_STRUCTURES/engine_type_register.h	/^      static void appendTypeID(int NUM_T){ *end = NUM_T; end++; };$/;"	f	class:TypeRegisterID
+castToByteArray	DATA_STRUCTURES/message_command_structures_rotary.h	/^  QByteArray castToByteArray() {QByteArray output_array = toByteArray(); return output_array; };$/;"	f	class:DriveTX::CommandLidControlJson
+castToByteArray	GENERIC_MESSAGES/message_struct_generic_ext.h	/^QByteArray MessageGenericExt<T,H>::castToByteArray()$/;"	f	class:MessageGenericExt
+command	DATA_STRUCTURES/message_command_structures_rotary.h	/^  JsonDocument command;$/;"	m	class:DriveTX::CommandJson
+command_settings	DATA_STRUCTURES/message_command_structures_rotary.h	/^  JsonDocument command_settings;$/;"	m	class:DriveTX::CommandLidControlJson
+command_string	DATA_STRUCTURES/message_command_structures_rotary.h	/^   std::string command_string;$/;"	m	class:DriveTX::CommandJson
+connectTo	NETWORK_INTERFACES/engine_can_interface.h	/^  void connectTo(QString IDDeviceStr, int IDDevice = 0) {};$/;"	f	class:CANConnectionEngine
+connectTo	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::connectTo(QString address, int Port)$/;"	f	class:TCPConnectionEngine
+connectTo	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::connectTo(QString address, int Speed)$/;"	f	class:UARTConnectionEngine
+connectTo	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::connectTo(QString IPDevice, int Port) $/;"	f	class:UDPConnectionEngine
+countTypes	DATA_STRUCTURES/engine_type_register.h	/^      static  int countTypes()         { return end - TYPES.begin(); }$/;"	f	class:TypeRegisterID
+defaultMessage	GENERIC_MESSAGES/message_struct_generic.h	/^  static T defaultMessage;$/;"	m	class:MessageGeneric
+defaultMessage	GENERIC_MESSAGES/message_struct_generic.h	/^template<typename T, HEADER_VARIABLE H> T MessageGeneric<T,H>::defaultMessage;$/;"	m	class:MessageGeneric
+device	NETWORK_INTERFACES/engine_can_interface.h	/^  QCanBusDevice *device = nullptr;$/;"	m	class:CANConnectionEngine
+deviceCAN	NETWORK_INTERFACES/engine_can_interface.h	/^  CANConnectionEngine* deviceCAN = nullptr;$/;"	m	class:CANTestMessage
+dispatchCommand	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^   static void dispatchCommand(const QByteArray& Command) $/;"	f	class:CommandDispatcherGeneric
+drives	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t drives;  \/\/ количество приводов$/;"	m	struct:SystemState
+dumpToByteArray	DATA_STRUCTURES/message_command_structures.h	/^   void dumpToByteArray(QByteArray& RawData) $/;"	f	class:CommandSetPair
+dumpToByteArray	DATA_STRUCTURES/message_command_structures_rotary.h	/^  void dumpToByteArray(QByteArray& output_array) { output_array = toByteArray(); };$/;"	f	class:DriveTX::CommandLidControlJson
+dumpToByteArray	GENERIC_MESSAGES/message_struct_generic_ext.h	/^void MessageGenericExt<T,H>::dumpToByteArray(QByteArray& RawData)$/;"	f	class:MessageGenericExt
+end	DATA_STRUCTURES/engine_type_register.h	/^      static std::array<int,100>::iterator end;$/;"	m	class:TypeRegisterID
+engineDelayMeasure	NETWORK_INTERFACES/engine_can_interface.h	/^  CANDelayMeasure* engineDelayMeasure = nullptr;$/;"	m	class:CANConnectionEngine
+engineSendTest	NETWORK_INTERFACES/engine_can_interface.h	/^  CANTestMessage * engineSendTest = nullptr;$/;"	m	class:CANConnectionEngine
+getHeaderMarker	DATA_STRUCTURES/message_command_structures_rotary.h	/^        static uint8_t getHeaderMarker() { MESSAGE_HEADER_ROTARY MESSAGE; return ((uint8_t*) &(MESSAGE.MESSAGE_IDENT))[0]; }$/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY
+getHeaderMarker	DATA_STRUCTURES/message_command_structures_rotary.h	/^        static uint8_t getHeaderMarker() { MESSAGE_HEADER_ROTARY_JSON MESSAGE; return ((uint8_t*) &(MESSAGE.MESSAGE_IDENT))[0]; }$/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+getHeaderMarker	GENERIC_MESSAGES/message_header_generic.h	/^        static uint8_t getHeaderMarker() { MESSAGE_HEADER_GENERIC MESSAGE; return ((uint8_t*) &(MESSAGE.HEADER))[0]; }$/;"	f	class:MESSAGE_HEADER_GENERIC
+getHeaderSize	DATA_STRUCTURES/message_command_structures_rotary.h	/^  static constexpr int getHeaderSize() { return 12;};$/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY
+getHeaderSize	DATA_STRUCTURES/message_command_structures_rotary.h	/^  static constexpr int getHeaderSize() { return 8;};$/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+getHeaderSize	GENERIC_MESSAGES/message_header_generic.h	/^  static constexpr int getHeaderSize()   { return sizeof(MESSAGE_HEADER_GENERIC);};$/;"	f	class:MESSAGE_HEADER_GENERIC
+getID	GENERIC_MESSAGES/message_header_generic.h	/^                        uint16_t getID() { return MESSAGE_IDENT; }$/;"	f	class:MESSAGE_HEADER_GENERIC
+getMaxSize	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^int MessageRotaryStateJson::getMaxSize()$/;"	f	class:MessageRotaryStateJson
+getMaxSize	DATA_STRUCTURES/message_command_structures_rotary.h	/^            static int getMaxSize()  { return MessageRotaryStateJson::getMaxSize(); }; $/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+getMaxSizeStatic	DATA_STRUCTURES/message_command_structures_rotary.h	/^  constexpr static int getMaxSizeStatic()  { return 500; }; $/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+getMessageSize	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^int MESSAGE_HEADER_ROTARY::getMessageSize() $/;"	f	class:MESSAGE_HEADER_ROTARY
+getMessageSize	DATA_STRUCTURES/message_command_structures_rotary.h	/^                   int getMessageSize() { return getMaxSize();}; $/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+getMessageSize	GENERIC_MESSAGES/message_header_generic.h	/^                   int getMessageSize()  { return sizeof(MESSAGE_HEADER_GENERIC) + DATA_SIZE; }$/;"	f	class:MESSAGE_HEADER_GENERIC
+getSize	DATA_STRUCTURES/message_command_structures_rotary.h	/^       static constexpr int getSize() { return 28;};$/;"	f	class:DriveTX::ControlTX
+getSize	DATA_STRUCTURES/message_command_structures_rotary.h	/^   static constexpr int getSize() { return 8;};$/;"	f	struct:SystemState
+isAligned	DATA_STRUCTURES/message_command_structures.h	/^template<typename T> bool isAligned() { return sizeof(T) == T::getSize(); }$/;"	f
+isConnected	NETWORK_INTERFACES/engine_can_interface.cpp	/^bool CANConnectionEngine::isConnected()$/;"	f	class:CANConnectionEngine
+isConnected	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^bool TCPConnectionEngine::isConnected()$/;"	f	class:TCPConnectionEngine
+isConnected	NETWORK_INTERFACES/engine_uart_interface.cpp	/^bool UARTConnectionEngine::isConnected()$/;"	f	class:UARTConnectionEngine
+isConnected	NETWORK_INTERFACES/engine_udp_interface.cpp	/^bool UDPConnectionEngine::isConnected() { return Connected;}$/;"	f	class:UDPConnectionEngine
+isMessageAvailable	NETWORK_INTERFACES/engine_can_interface.cpp	/^bool CANConnectionEngine::isMessageAvailable() { return false;}$/;"	f	class:CANConnectionEngine
+isMessageAvailable	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^bool TCPConnectionEngine::isMessageAvailable() { return MessageStorage->isMessageAvailable(); }$/;"	f	class:TCPConnectionEngine
+isMessageAvailable	NETWORK_INTERFACES/engine_uart_interface.cpp	/^bool UARTConnectionEngine::isMessageAvailable() { return MessageStorage->isMessageAvailable(); }/;"	f	class:UARTConnectionEngine
+isMessageAvailable	NETWORK_INTERFACES/engine_udp_interface.cpp	/^bool UDPConnectionEngine::isMessageAvailable() { return MessageStorage->isMessageAvailable(); }$/;"	f	class:UDPConnectionEngine
+isMessageAvailable	RING_BUFFER/engine_ring_buffer_generic.h	/^bool RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::isMessageAvailable()$/;"	f	class:RingBufferGeneric
+isMessasge	GENERIC_MESSAGES/message_struct_generic.h	/^	                bool isMessasge()     { return ((H*)(&DATA))->isValid(); };$/;"	f	class:MessageGeneric
+isMessasge	GENERIC_MESSAGES/message_struct_generic.h	/^                  bool isMessasge()     { return (HEADER.isValid()); };$/;"	f	class:MessageGeneric
+isMessasge	GENERIC_MESSAGES/message_struct_generic.h	/^                  bool isMessasge() { return (HEADER.isValid()); };$/;"	f	class:MessageGeneric
+isMessasge	GENERIC_MESSAGES/message_struct_generic_ext.h	/^           bool isMessasge() { return (this->HEADER.isValid()); };$/;"	f	class:MessageGenericExt
+isRegistered	DATA_STRUCTURES/engine_type_register.h	/^      static bool isRegistered(int ID) { auto it = std::find(TYPES.begin(), TYPES.end(), ID); return it != TYPES.end(); };$/;"	f	class:TypeRegisterID
+isTypeRegistered	DATA_STRUCTURES/engine_type_register.h	/^          static bool isTypeRegistered()               { return TypeRegisterID<0>::isRegistered(TYPE_ID);}$/;"	f	class:TypeRegister
+isTypeRegistered	DATA_STRUCTURES/engine_type_register.h	/^          static bool isTypeRegistered(const int& NUM) { return TypeRegisterID<0>::isRegistered(NUM);}$/;"	f	class:TypeRegister
+isValid	DATA_STRUCTURES/message_command_structures_rotary.h	/^                          bool isValid() { return MESSAGE_IDENT == 0x7B22 ; }$/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY_JSON
+isValid	DATA_STRUCTURES/message_command_structures_rotary.h	/^                  bool isValid() {return MESSAGE_IDENT == 0xA001 || MESSAGE_IDENT == 0xA002; }$/;"	f	struct:DriveTX::MESSAGE_HEADER_ROTARY
+isValid	GENERIC_MESSAGES/message_header_generic.h	/^                  bool isValid()         { return HEADER == 0x8220; }$/;"	f	class:MESSAGE_HEADER_GENERIC
+linkTo	NETWORK_INTERFACES/connection_interface.h	/^  void linkTo(std::shared_ptr<MessageStorageInterface> Storage) { MessageStorage = Storage; };$/;"	f	class:ConnectionInterface
+linkTo	NETWORK_INTERFACES/engine_can_interface.h	/^  void linkTo(CANConnectionEngine* device) $/;"	f	class:CANDelayMeasure
+linkTo	NETWORK_INTERFACES/engine_can_interface.h	/^  void linkTo(CANConnectionEngine* device) { deviceCAN = device; };$/;"	f	class:CANTestMessage
+linkTo	RING_BUFFER/message_storage_interface.h	/^              void linkTo (std::shared_ptr<MessageDispatcherInterface> Dispatcher) { LinkedDispatcher = Dispatcher; };$/;"	f	class:MessageStorageInterface
+linkTo	RING_BUFFER_ADAPTERS/message_dispatcher_generic.h	/^   void linkTo(std::shared_ptr<MessageStorageInterface> Storage) $/;"	f	class:MessageDispatcher
+linkTo	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	/^   void linkTo   (std::shared_ptr<MessageStorageInterface> Storage) {   LinkedStorage = Storage;};$/;"	f	class:MessageDispatcherInterface
+listenTo	NETWORK_INTERFACES/engine_can_interface.h	/^  void  listenTo(QHostAddress::SpecialAddress IPDevice, int Port) {};$/;"	f	class:CANConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_can_interface.h	/^  void  listenTo(QString IDDeviceStr, int IDDevice = 0) {};$/;"	f	class:CANConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::listenTo(QHostAddress::SpecialAddress address, int Port)$/;"	f	class:TCPConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::listenTo(QString address, int Port)$/;"	f	class:TCPConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::listenTo(QHostAddress::SpecialAddress address, int Port)$/;"	f	class:UARTConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::listenTo(QString address, int Port)$/;"	f	class:UARTConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void  UDPConnectionEngine::listenTo(QHostAddress::SpecialAddress IPHost, int Port)$/;"	f	class:UDPConnectionEngine
+listenTo	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void  UDPConnectionEngine::listenTo(QString IPHost, int Port)$/;"	f	class:UDPConnectionEngine
+loadData	DATA_STRUCTURES/message_command_structures_rotary.h	/^    void loadData(QByteArray array)          { DeserializationError err = deserializeJson(command, array.data()); };$/;"	f	class:DriveTX::MessageRotaryStateJson
+loadData	DATA_STRUCTURES/message_command_structures_rotary.h	/^    void loadData(const char* data, int size)$/;"	f	class:DriveTX::MessageRotaryStateJson
+loadData	DATA_STRUCTURES/message_command_structures_rotary.h	/^    void loadData(std::array<uint8_t,SIZE> data)$/;"	f	class:DriveTX::MessageRotaryStateJson
+mode	DATA_STRUCTURES/message_command_structures_rotary.h	/^     uint8_t mode = 0x01;$/;"	m	class:DriveTX::Modes
+nsec	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint32_t nsec =0x0; \/\/ количество наносекунд прошедшее с последней секунды$/;"	m	struct:TimeStamp
+operator !=	RING_BUFFER/message_iterator_generic.h	/^	bool operator!=(MessageIteratorGenericBase<H>& Message) { return !(Message == *this); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator !=	RING_BUFFER/message_iterator_generic.h	/^    bool operator!=(MessageIteratorGenericBase<H>& Message) { return !(Message == *this); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator *	RING_BUFFER/message_iterator_generic.h	/^	     MessageGeneric<void*,H>& operator*()     { return *reinterpret_cast<MessageGeneric<void*,H>* >(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator *	RING_BUFFER/message_iterator_generic.h	/^	MessageGeneric<void*,H>& operator*() { return *reinterpret_cast<MessageGeneric<void*,H>* >(PtrMessageBegin); }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator ++	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric<H,IteratorMode::Chunked> operator++(int) { this->SwitchToNext(); return* this; };$/;"	f	class:IteratorMode::MessageIteratorGeneric
+operator ++	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric<H,IteratorMode::ChunkedContinous> operator++(int) { this->SwitchToNext(); return* this; };$/;"	f	class:IteratorMode::MessageIteratorGeneric
+operator ++	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGeneric<H,IteratorMode::Continous> MessageIteratorGeneric<H, IteratorMode::Continous>::operator++(int) $/;"	f	class:IteratorMode::MessageIteratorGeneric
+operator ++	RING_BUFFER/message_iterator_generic.h	/^    MessageIteratorGenericBase<H> operator++(int) { SwitchToNext(); return* this; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator <<	DATA_STRUCTURES/message_command_structures.h	/^   friend void operator<<(QDataStream& stream, CommandAiming<N_CHAN>& copy) $/;"	f	class:CommandAiming
+operator <<	DATA_STRUCTURES/message_command_structures.h	/^   friend void operator<<(QDataStream& stream, CommandDevice<NUM_DEV>& command) $/;"	f	struct:CommandDevice
+operator <<	DATA_STRUCTURES/message_command_structures.h	/^   friend void operator<<(QDataStream& stream, CommandSetPair<N_CHAN>& command) $/;"	f	class:CommandSetPair
+operator <<	DATA_STRUCTURES/message_command_structures.h	/^  friend void operator<<(QDataStream& stream, CommandDeviceRedux& command)$/;"	f	struct:CommandDeviceRedux
+operator <<	DATA_STRUCTURES/message_command_structures.h	/^friend void operator<<(StateRotaryControl& Receiver, RequestState<N_CHAN,T>& state)$/;"	f	struct:RequestState
+operator <<	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^QDataStream& operator<<(QDataStream& out_stream, MESSAGE_HEADER_ROTARY& Src)$/;"	f
+operator <<	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void operator<<(QDataStream& stream, ControlTX& src) $/;"	f
+operator <<	GENERIC_MESSAGES/message_header_generic_ext.h	/^    friend QDataStream& operator<<(QDataStream& stream, MESSAGE_HEADER_EXT& Head)$/;"	f	class:MESSAGE_HEADER_EXT
+operator <<	GENERIC_MESSAGES/message_struct_generic_ext.h	/^template<typename M,typename H> void operator<<(QDataStream& stream, MessageGenericExt<M,H>& Message)$/;"	f
+operator =	DATA_STRUCTURES/message_command_structures.h	/^                        void operator=(StateRotaryControl setting) { Command.first  = setting.Engine1.Position; $/;"	f	class:CommandSetPair
+operator =	DATA_STRUCTURES/message_command_structures.h	/^                        void operator=(const CommandAiming<N_CHAN>& Copy) { Command = Copy.Command; CommandType = Copy.CommandType; };$/;"	f	class:CommandAiming
+operator =	DATA_STRUCTURES/message_command_structures.h	/^   template<typename T> void operator=(const QPair<T,T>& Pair) { Command = Pair; };$/;"	f	class:CommandAiming
+operator =	DATA_STRUCTURES/message_command_structures.h	/^   template<typename T> void operator=(const QPair<T,T>& Pos)      { Command = Pos; };$/;"	f	class:CommandSetPair
+operator =	DATA_STRUCTURES/message_command_structures.h	/^   void operator=(const CommandDevice<NUM_DEV>& Copy) { ModuleID = Copy.ModuleID; Command = Copy.Command; };$/;"	f	struct:CommandDevice
+operator =	DATA_STRUCTURES/message_command_structures.h	/^   void operator=(const CommandSetPair<N_CHAN>& Copy) { Command = Copy.Command; };$/;"	f	class:CommandSetPair
+operator =	DATA_STRUCTURES/message_command_structures.h	/^   void operator=(const RequestDevice<NUM_DEV>& Copy) $/;"	f	struct:RequestDevice
+operator =	DATA_STRUCTURES/message_command_structures.h	/^   void operator=(const RequestState<N_CHAN,T>& Copy) $/;"	f	struct:RequestState
+operator =	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^  void SystemState::operator=(SystemState& new_state)$/;"	f	class:SystemState
+operator =	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void ControlTX::operator=(StateRotaryControl setting) $/;"	f	class:ControlTX
+operator =	DATA_STRUCTURES/message_command_structures_rotary.h	/^                       void operator=(StateRotaryControl setting) { setData(setting); };$/;"	f	class:DriveTX::CommandSetPairJson
+operator =	DATA_STRUCTURES/message_command_structures_rotary.h	/^  template<typename T> void operator=(QPair<T,T> Pos)     { value0.target = Pos.first; value1.target = Pos.second; };$/;"	f	class:DriveTX::ControlTX
+operator =	DATA_STRUCTURES/message_command_structures_rotary.h	/^  template<typename T> void operator=(const QPair<T,T>& Pos)      { setData(Pos); };$/;"	f	class:DriveTX::CommandSetPairJson
+operator =	GENERIC_MESSAGES/message_struct_generic_ext.h	/^  void operator=(const T& command) { this->DATA = command; };$/;"	f	class:MessageGenericExt
+operator =	RING_BUFFER/message_iterator_generic.h	/^void MessageIteratorGenericBase<H>::operator=(const MessageIteratorGenericBase<H>& Message)$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator ==	DATA_STRUCTURES/message_command_structures.h	/^  bool operator==(CommandCheckConnection copy) { return (Command == copy.Command && Param == copy.Param); }$/;"	f	struct:CommandCheckConnection
+operator ==	RING_BUFFER/message_iterator_generic.h	/^	bool operator==(MessageIteratorGenericBase<H>& Message) { return PtrMessageBegin == Message.PtrMessageBegin; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator ==	RING_BUFFER/message_iterator_generic.h	/^    bool operator==(MessageIteratorGenericBase<H>& Message) { return PtrMessageBegin == Message.PtrMessageBegin; }$/;"	f	class:IteratorMode::MessageIteratorGenericBase
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^QDataStream& MESSAGE_HEADER_ROTARY::operator>>(QDataStream& out_stream) $/;"	f	class:MESSAGE_HEADER_ROTARY
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^QDataStream& operator>>(QDataStream& stream, DriveTX& rec)$/;"	f
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void ControlTX::operator>>(QDataStream& stream) $/;"	f	class:ControlTX
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void operator>>(QDataStream& stream, ControlTX& rec) { stream >> rec.value0 >> rec.value1; }$/;"	f
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.h	/^       void operator>>(QByteArray& output_array) { output_array = toByteArray(); };$/;"	f	class:DriveTX::CommandLidControlJson
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.h	/^  void operator>>(QByteArray& output_array) { output_array = toByteArray(); };$/;"	f	class:DriveTX::MessageRotaryStateJson
+operator >>	DATA_STRUCTURES/message_command_structures_rotary.h	/^  void operator>>(std::array<uint8_t,SIZE>& output_array) $/;"	f	class:DriveTX::MessageRotaryStateJson
+operator >>	GENERIC_MESSAGES/message_header_generic_ext.h	/^    friend QDataStream& operator>>(QDataStream& stream, MESSAGE_HEADER_EXT& Head)$/;"	f	class:MESSAGE_HEADER_EXT
+operator >>	GENERIC_MESSAGES/message_struct_generic.h	/^         void operator>>(T& Rec) { Rec.loadData(DATA); }$/;"	f	class:MessageGeneric
+operator >>	GENERIC_MESSAGES/message_struct_generic.h	/^  friend void operator>>(T& Src, MessageGeneric<T,H>& Rec) { Src >> Rec.DATA; }$/;"	f	class:MessageGeneric
+operator >>	GENERIC_MESSAGES/message_struct_generic_ext.h	/^void MessageGenericExt<T,H>::operator>>(QByteArray& RawData)$/;"	f	class:MessageGenericExt
+operator >>	GENERIC_MESSAGES/message_struct_generic_ext.h	/^void operator>>(QDataStream& stream, MessageGenericExt<T,H>& Message)$/;"	f
+operator >>	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	/^   friend void operator>>(MessageStorageInterface& Storage, MessageDispatcherInterface& Dispatcher) $/;"	f	class:MessageDispatcherInterface
+operator >>	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	/^   friend void operator>>(std::shared_ptr<MessageStorageInterface> Storage, MessageDispatcherInterface& Dispatcher) $/;"	f	class:MessageDispatcherInterface
+operator |	NETWORK_INTERFACES/connection_interface.h	/^  std::shared_ptr<MessageStorageInterface> operator|(std::shared_ptr<MessageStorageInterface> Storage) $/;"	f	class:ConnectionInterface
+operator |	RING_BUFFER/message_storage_interface.h	/^    friend void operator| (std::shared_ptr<MessageStorageInterface> Storage, $/;"	f	class:MessageStorageInterface
+operator |	RING_BUFFER_ADAPTERS/message_dispatcher_interface.h	/^   void operator|(std::shared_ptr<MessageStorageInterface> Storage) {      this->linkTo(Storage); }$/;"	f	class:MessageDispatcherInterface
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  bool isConnected() override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  bool isMessageAvailable() override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void  listenTo(QHostAddress::SpecialAddress IPDevice, int Port) override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void  listenTo(QString IPDevice, int Port) override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void connectTo(QString IPDevice, int Port) override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void slotCheckConnection() override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void slotCloseConnection() override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void slotSendMessage(const QByteArray& Command, uint16_t Param = 0) override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void slotSendMessage(const char* DataCommand, int size, uint16_t Param = 0) override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_tcp_interface.h	/^  void tryConnectConstantly(QString Address, int Port) override;$/;"	m	class:TCPConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  bool isConnected() override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  bool isMessageAvailable() override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void  listenTo(QHostAddress::SpecialAddress IPDevice, int Port) override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void  listenTo(QString IPDevice, int Speed) override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void connectTo(QString IPDevice, int Speed) override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void slotCheckConnection() override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void slotCloseConnection() override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void slotSendMessage(const QByteArray& Command, uint16_t Param = 0) override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void slotSendMessage(const char* DataCommand, int size, uint16_t Param = 0) override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_uart_interface.h	/^  void tryConnectConstantly(QString Address, int Port) override;$/;"	m	class:UARTConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^    bool isConnected() override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^    bool isMessageAvailable() override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^    void  listenTo(QHostAddress::SpecialAddress IPHost, int Port) override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^    void  listenTo(QString IPHost, int Port) override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^    void connectTo(QString IPDevice, int Port) override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^    void tryConnectConstantly(QString Address, int Port) override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^  void slotCheckConnection() override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^  void slotCloseConnection() override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^  void slotSendMessage(const QByteArray& Command, uint16_t Param = 0) override;$/;"	m	class:UDPConnectionEngine
+override	NETWORK_INTERFACES/engine_udp_interface.h	/^  void slotSendMessage(const char* Command, int size, uint16_t Param = 0) override;$/;"	m	class:UDPConnectionEngine
+override	RING_BUFFER/engine_ring_buffer_generic.h	/^                            void* takeAnyMessage() override;$/;"	m	class:RingBufferGeneric
+override	RING_BUFFER/engine_ring_buffer_generic.h	/^    bool isMessageAvailable()                     override;$/;"	m	class:RingBufferGeneric
+override	RING_BUFFER/engine_ring_buffer_generic.h	/^    void appendData(uint8_t* Data, uint16_t Size) override;$/;"	m	class:RingBufferGeneric
+override	RING_BUFFER/engine_ring_buffer_generic.h	/^    void reset()                                  override;$/;"	m	class:RingBufferGeneric
+print	DATA_STRUCTURES/message_command_structures.h	/^   std::string print() { std::string str; std::stringstream stream; stream << Command.first<<" "<< Command.second; return stream.str(); }$/;"	f	class:CommandAiming
+print	DATA_STRUCTURES/message_command_structures.h	/^   std::string print() { std::stringstream stream; stream << Command.first << " " << Command.second; return stream.str(); }$/;"	f	class:CommandSetPair
+print	DATA_STRUCTURES/message_command_structures.h	/^   std::string print() { std::stringstream stream; stream << DeviceID << " "$/;"	f	struct:RequestDevice
+print	DATA_STRUCTURES/message_command_structures.h	/^   std::string print() { std::stringstream stream; stream << Param1 << " "$/;"	f	struct:RequestState
+print	DATA_STRUCTURES/message_command_structures.h	/^  std::string print() { std::stringstream stream; stream << Command << " "<< Param1; return stream.str(); }$/;"	f	struct:CommandDeviceRedux
+print	DATA_STRUCTURES/message_command_structures.h	/^  std::string print() { std::stringstream stream; stream << Command << " "<< Param1; return stream.str(); }$/;"	f	struct:RequestDeviceRedux
+print	DATA_STRUCTURES/message_command_structures.h	/^  std::string print() { std::stringstream stream; stream << ModuleID << " " << Command; return stream.str(); }$/;"	f	struct:CommandDevice
+printAvailableDevices	NETWORK_INTERFACES/engine_can_interface.cpp	/^void CANConnectionEngine::printAvailableDevices()$/;"	f	class:CANConnectionEngine
+printCommand	DATA_STRUCTURES/message_command_structures_rotary.h	/^  void printCommand() { qDebug() << "[ COMMAND LID ] " << command_string.c_str(); }$/;"	f	class:DriveTX::CommandLidControlJson
+printDataType	DATA_STRUCTURES/message_command_structures_rotary.h	/^  static QString printDataType() { return "CommandLidControlJson"; }$/;"	f	class:DriveTX::CommandLidControlJson
+printDataType	GENERIC_MESSAGES/message_struct_generic_ext.h	/^    static QString printDataType() { return TypeRegister<T>::GetTypeName(); };$/;"	f	class:MessageGenericExt
+printMessage	DATA_STRUCTURES/message_command_structures_rotary.h	/^        void printMessage() { serializeJson(command,command_string); qDebug() << "[ ROTARY STATE JSON ] " << command_string.c_str(); }$/;"	f	class:DriveTX::MessageRotaryStateJson
+printRegistered	DATA_STRUCTURES/engine_type_register.h	/^      static void printRegistered()    { for(auto it = TYPES.begin(); it != end; it++) std::cout << "[ TYPE ID ] " << *it <<  " [ REGISTERED ]" << std::endl; }$/;"	f	class:TypeRegisterID
+printTypesSignature	DATA_STRUCTURES/engine_type_register.h	/^      static void printTypesSignature() $/;"	f	class:TypeRegisterInfo
+registerType	DATA_STRUCTURES/engine_type_register.h	/^      static void registerType(std::string name) $/;"	f	class:TypeRegister
+reset	RING_BUFFER/engine_ring_buffer_generic.h	/^void RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::reset()$/;"	f	class:RingBufferGeneric
+sec	DATA_STRUCTURES/message_command_structures_rotary.h	/^  uint32_t sec = 0x0;  \/\/ количество секунд прошедшее с момента запуска$/;"	m	struct:TimeStamp
+setAccelLimit	DATA_STRUCTURES/message_command_structures_rotary.h	/^                       void setAccelLimit(uint32_t Limit) {};$/;"	f	class:DriveTX::ControlTX
+setData	DATA_STRUCTURES/message_command_structures.h	/^                      void   setData(StateRotaryControl setting) { Command.first = setting.Engine1.Position; $/;"	f	class:CommandSetPair
+setData	DATA_STRUCTURES/message_command_structures.h	/^   template<typename T> void setData  (const QPair<T,T>& Pair) { Command = Pair; };$/;"	f	class:CommandAiming
+setData	DATA_STRUCTURES/message_command_structures.h	/^   template<typename T> void setData  (const QPair<T,T>& Pair, uint32_t type) { Command = Pair; CommandType = type; };$/;"	f	class:CommandAiming
+setData	DATA_STRUCTURES/message_command_structures.h	/^   template<typename T> void setData(const QPair<T,T>& Pos)      { Command = Pos; };$/;"	f	class:CommandSetPair
+setData	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void CommandSetPairJson::setData(StateRotaryControl setting) $/;"	f	class:CommandSetPairJson
+setData	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void ControlTX::setData(StateRotaryControl setting) $/;"	f	class:ControlTX
+setData	DATA_STRUCTURES/message_command_structures_rotary.h	/^  template<typename T> void setData(QPair<T,T> Pos)       { value0.target = Pos.first; value1.target = Pos.second; };$/;"	f	class:DriveTX::ControlTX
+setData	DATA_STRUCTURES/message_command_structures_rotary.h	/^  template<typename T> void setData(T Param) {}; $/;"	f	class:DriveTX::CommandLidControlJson
+setData	DATA_STRUCTURES/message_command_structures_rotary.h	/^void CommandSetPairJson::setData(const QPair<T,T>& Pos)$/;"	f	class:DriveTX::CommandSetPairJson
+setData	GENERIC_MESSAGES/message_struct_generic_ext.h	/^  template<typename T_PARAM> void setData(const T_PARAM& DATA_PARAMS) { this->DATA = DATA_PARAMS; };$/;"	f	class:MessageGenericExt
+setData	GENERIC_MESSAGES/message_struct_generic_ext.h	/^  template<typename T_PARAM> void setData(const T_PARAM& PARAM1, const T_PARAM& PARAM2) { this->DATA.setData(PARAM1, PARAM2);; };$/;"	f	class:MessageGenericExt
+setMode	DATA_STRUCTURES/message_command_structures_rotary.h	/^                       void setMode(uint8_t Mode)         $/;"	f	class:DriveTX::ControlTX
+setParams	DATA_STRUCTURES/message_command_structures_rotary.cpp	/^void MessageRotaryStateJson::setParams(QString setting1, QString setting2)$/;"	f	class:MessageRotaryStateJson
+slave1	DATA_STRUCTURES/message_command_structures_rotary.h	/^  JsonDocument slave1;$/;"	m	class:DriveTX::CommandSetPairJson
+slave1	DATA_STRUCTURES/message_command_structures_rotary.h	/^  JsonDocument slave1;$/;"	m	class:DriveTX::MessageRotaryStateJson
+slave2	DATA_STRUCTURES/message_command_structures_rotary.h	/^  JsonDocument slave2;$/;"	m	class:DriveTX::CommandSetPairJson
+slave2	DATA_STRUCTURES/message_command_structures_rotary.h	/^  JsonDocument slave2;$/;"	m	class:DriveTX::MessageRotaryStateJson
+slotAcceptConnection	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotAcceptConnection()$/;"	f	class:TCPConnectionEngine
+slotAcceptConnection	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotAcceptConnection()$/;"	f	class:UARTConnectionEngine
+slotCheckConnection	NETWORK_INTERFACES/engine_can_interface.cpp	/^void CANConnectionEngine::slotCheckConnection()$/;"	f	class:CANConnectionEngine
+slotCheckConnection	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotCheckConnection() { }$/;"	f	class:TCPConnectionEngine
+slotCheckConnection	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotCheckConnection() { }$/;"	f	class:UARTConnectionEngine
+slotCheckConnection	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::slotCheckConnection()$/;"	f	class:UDPConnectionEngine
+slotCloseConnection	NETWORK_INTERFACES/engine_can_interface.h	/^  void slotCloseConnection(){};$/;"	f	class:CANConnectionEngine
+slotCloseConnection	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotCloseConnection()$/;"	f	class:TCPConnectionEngine
+slotCloseConnection	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotCloseConnection()$/;"	f	class:UARTConnectionEngine
+slotCloseConnection	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::slotCloseConnection()$/;"	f	class:UDPConnectionEngine
+slotConnectedToHost	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotConnectedToHost()$/;"	f	class:TCPConnectionEngine
+slotConnectedToHost	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotConnectedToHost()$/;"	f	class:UARTConnectionEngine
+slotConnectionAttempt	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotConnectionAttempt()$/;"	f	class:TCPConnectionEngine
+slotConnectionAttempt	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotConnectionAttempt()$/;"	f	class:UARTConnectionEngine
+slotMessageReceived	NETWORK_INTERFACES/engine_can_interface.h	/^  void slotMessageReceived()$/;"	f	class:CANDelayMeasure
+slotReadData	NETWORK_INTERFACES/engine_can_interface.cpp	/^void CANConnectionEngine::slotReadData()$/;"	f	class:CANConnectionEngine
+slotReadData	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotReadData()$/;"	f	class:TCPConnectionEngine
+slotReadData	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotReadData()$/;"	f	class:UARTConnectionEngine
+slotReadData	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::slotReadData()$/;"	f	class:UDPConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_can_interface.cpp	/^void CANConnectionEngine::slotSendMessage(const QByteArray& message, uint16_t IDDevice)$/;"	f	class:CANConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_can_interface.cpp	/^void CANConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice)$/;"	f	class:CANConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotSendMessage(const QByteArray& Command, uint16_t Param)$/;"	f	class:TCPConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t Param)$/;"	f	class:TCPConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotSendMessage(const QByteArray& Command, uint16_t Param)$/;"	f	class:UARTConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t Param)$/;"	f	class:UARTConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::slotSendMessage(const QByteArray& Command, uint16_t Param)$/;"	f	class:UDPConnectionEngine
+slotSendMessage	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::slotSendMessage(const char* Command, int size, uint16_t Param)$/;"	f	class:UDPConnectionEngine
+slotSendTest	NETWORK_INTERFACES/engine_can_interface.h	/^  virtual void slotSendTest()$/;"	f	class:CANTestMessage
+slotStartSendTest	NETWORK_INTERFACES/engine_can_interface.h	/^  void slotStartSendTest(bool OnOff) {if(deviceCAN == nullptr) return; if(OnOff) timerSendTest.start(1000); else timerSendTest.stop(); }$/;"	f	class:CANTestMessage
+state	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t state;   \/\/ байт состояния системы$/;"	m	struct:SystemState
+takeAnyMessage	RING_BUFFER/engine_ring_buffer_generic.h	/^void* RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::takeAnyMessage()$/;"	f	class:RingBufferGeneric
+takeMessage	RING_BUFFER/engine_ring_buffer_generic.h	/^MessageGeneric<void*,H_TYPE>& RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::takeMessage()$/;"	f	class:RingBufferGeneric
+takeMessage	RING_BUFFER/message_storage_interface.h	/^    MessageGeneric<void*,H_TYPE>& takeMessage()    { return *(reinterpret_cast<MessageGeneric<void*,H_TYPE>*>(takeAnyMessage())); }$/;"	f	class:MessageStorageInterface
+takeMessagePtr	RING_BUFFER/engine_ring_buffer_generic.h	/^MessageGeneric<void*,H_TYPE>* RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::takeMessagePtr()$/;"	f	class:RingBufferGeneric
+takeMessagePtr	RING_BUFFER/message_storage_interface.h	/^    MessageGeneric<void*,H_TYPE>* takeMessagePtr() { return   reinterpret_cast<MessageGeneric<void*,H_TYPE>*>(takeAnyMessage()); }$/;"	f	class:MessageStorageInterface
+target	DATA_STRUCTURES/message_command_structures_rotary.h	/^    double target    = 0.0;   \/\/ задание в зависимости от режима управления$/;"	m	class:DriveTX::Modes
+temp	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t temp;    \/\/ температура вычислителя в градусах Цельсия$/;"	m	struct:SystemState
+temp1_0	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t temp1_0; \/\/ температура приводов в градусах Цельсия$/;"	m	struct:SystemState
+temp1_1	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t temp1_1; \/\/ температура приводов в градусах Цельсия$/;"	m	struct:SystemState
+temp2_0	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t temp2_0; \/\/ температура оптических клиньев в градусах Цельсия$/;"	m	struct:SystemState
+temp2_1	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t temp2_1; \/\/ температура оптических клиньев в градусах Цельсия$/;"	m	struct:SystemState
+timeEnd	NETWORK_INTERFACES/engine_can_interface.h	/^  std::chrono::time_point<std::chrono::high_resolution_clock> timeEnd;$/;"	m	class:CANDelayMeasure
+timeStart	NETWORK_INTERFACES/engine_can_interface.h	/^  std::chrono::time_point<std::chrono::high_resolution_clock> timeStart;$/;"	m	class:CANDelayMeasure
+timerConnectAttempt	NETWORK_INTERFACES/engine_udp_interface.h	/^   QTimer timerConnectAttempt;$/;"	m	class:UDPConnectionEngine
+timerSendTest	NETWORK_INTERFACES/engine_can_interface.h	/^  QTimer timerSendTest;$/;"	m	class:CANTestMessage
+toByteArray	DATA_STRUCTURES/message_command_structures_rotary.h	/^    QByteArray toByteArray() { return QByteArray(command_string.data(), command_string.size());};$/;"	f	class:DriveTX::CommandJson
+toByteArray	DATA_STRUCTURES/message_command_structures_rotary.h	/^  QByteArray toByteArray() { return QByteArray((char*)this, sizeof(ControlTX));}$/;"	f	class:DriveTX::ControlTX
+toByteArray	GENERIC_MESSAGES/message_header_generic_ext.h	/^    QByteArray toByteArray()$/;"	f	class:MESSAGE_HEADER_EXT
+toByteArray	GENERIC_MESSAGES/message_struct_generic_ext.h	/^QByteArray MessageGenericExt<T,H>::toByteArray()$/;"	f	class:MessageGenericExt
+toGenericMessage	GENERIC_MESSAGES/message_struct_generic.h	/^  MessageGeneric<void*,H>& toGenericMessage() { return *reinterpret_cast<MessageGeneric<void*,H>*>(this);  }$/;"	f	class:MessageGeneric
+toGenericMessage	GENERIC_MESSAGES/message_struct_generic_ext.h	/^      MessageGenericExt<void*,H>& toGenericMessage() { return *reinterpret_cast<MessageGenericExt<void*,H>*>(this);  }$/;"	f	class:MessageGenericExt
+toString	GENERIC_MESSAGES/message_struct_generic_ext.h	/^ QString MessageGenericExt<T,H>::toString() { return QString("VAL: %1").arg(this->DATA); }$/;"	f	class:MessageGenericExt
+tryConnectConstantly	NETWORK_INTERFACES/engine_can_interface.h	/^  void tryConnectConstantly(QString address, int Port) {};$/;"	f	class:CANConnectionEngine
+tryConnectConstantly	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^void TCPConnectionEngine::tryConnectConstantly(QString Address, int Port)$/;"	f	class:TCPConnectionEngine
+tryConnectConstantly	NETWORK_INTERFACES/engine_uart_interface.cpp	/^void UARTConnectionEngine::tryConnectConstantly(QString Address, int Port)$/;"	f	class:UARTConnectionEngine
+tryConnectConstantly	NETWORK_INTERFACES/engine_udp_interface.cpp	/^void UDPConnectionEngine::tryConnectConstantly(QString Address, int Port)$/;"	f	class:UDPConnectionEngine
+typeNames	DATA_STRUCTURES/engine_type_register.h	/^      static std::map<int, std::string> typeNames;$/;"	m	class:TypeRegisterInfo
+typeNames	DATA_STRUCTURES/engine_type_register.h	/^template<int NUM> std::map<int, std::string> TypeRegisterInfo<NUM>::typeNames;$/;"	m	class:TypeRegisterInfo
+typeSizes	DATA_STRUCTURES/engine_type_register.h	/^      static std::map<int, int> typeSizes;$/;"	m	class:TypeRegisterInfo
+typeSizes	DATA_STRUCTURES/engine_type_register.h	/^template<int NUM> std::map<int, int>         TypeRegisterInfo<NUM>::typeSizes;$/;"	m	class:TypeRegisterInfo
+value0	DATA_STRUCTURES/message_command_structures_rotary.h	/^  DriveTX value0; $/;"	m	class:DriveTX::ControlTX
+value1	DATA_STRUCTURES/message_command_structures_rotary.h	/^  DriveTX value1; $/;"	m	class:DriveTX::ControlTX
+version	DATA_STRUCTURES/message_command_structures_rotary.h	/^   uint8_t version; \/\/ версия протокола$/;"	m	struct:SystemState
+~CANConnectionEngine	NETWORK_INTERFACES/engine_can_interface.cpp	/^CANConnectionEngine::~CANConnectionEngine() $/;"	f	class:CANConnectionEngine
+~RingBufferGeneric	RING_BUFFER/engine_ring_buffer_generic.h	/^RingBufferGeneric<H_TYPE,M_SIZE,M_NUM,IT_MODE>::~RingBufferGeneric() { delete DATA; }$/;"	f	class:RingBufferGeneric
+~TCPConnectionEngine	NETWORK_INTERFACES/engine_tcp_interface.cpp	/^TCPConnectionEngine::~TCPConnectionEngine() $/;"	f	class:TCPConnectionEngine
+~UARTConnectionEngine	NETWORK_INTERFACES/engine_uart_interface.cpp	/^UARTConnectionEngine::~UARTConnectionEngine() $/;"	f	class:UARTConnectionEngine
+~UDPConnectionEngine	NETWORK_INTERFACES/engine_udp_interface.cpp	/^UDPConnectionEngine::~UDPConnectionEngine()$/;"	f	class:UDPConnectionEngine

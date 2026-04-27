@@ -30,7 +30,7 @@ public:
     void AppendCallback(const MessageCall& Call)
     {
        CallList[TypeRegister<T>::TYPE_ID] = Call;
-       qDebug() << "APPEND CALLBACK TO : "<< typeid(T).name() << " ID:" << TypeRegister<T>::TYPE_ID;
+       qDebug() << "APPEND CALLBACK TO : "<< typeid(T).name() << " ID:" << TypeRegister<T>::TYPE_ID << "[ MAP ]";
     }
 
 
@@ -118,7 +118,7 @@ template<typename BufferType>
 class MessageDispatcher<MESSAGE_HEADER_GENERIC, BufferType> : public MessageDispatcherInterface
 {
 public:
-    MessageDispatcher() { CallList.resize(TypeRegister<>::GetTypeCount()+1); std::fill(CallList.begin(), CallList.end(), nullptr);}
+    MessageDispatcher() { CallList.resize(0xB002); std::fill(CallList.begin(), CallList.end(), nullptr);}
     using MessageCall   = std::function<void (MessageGeneric<void*, MESSAGE_HEADER_GENERIC>&)>;
 
    //   void DispatchMessages();

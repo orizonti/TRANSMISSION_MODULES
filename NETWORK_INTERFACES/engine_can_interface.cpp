@@ -78,7 +78,7 @@ void CANConnectionEngine::slotReadData()
 
 void CANConnectionEngine::slotSendMessage(const QByteArray& message, uint16_t IDDevice)
 {
-    qDebug() << OutputFilter::Filter(100) << "[ CAN ] SEND: " << QString(message.toHex()); 
+    //qDebug() << OutputFilter::Filter(100) << "[ CAN ] SEND: " << QString(message.toHex()); 
 
     QCanBusFrame frame = QCanBusFrame(IDDevice, message);
                  frame.setFrameType(QCanBusFrame::DataFrame);
@@ -86,15 +86,16 @@ void CANConnectionEngine::slotSendMessage(const QByteArray& message, uint16_t ID
     device->writeFrame(frame);
 }
 
-//void CANConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice)
-//{
-//  QByteArray message(DataCommand,size);
-//
-//  QCanBusFrame frame = QCanBusFrame(IDDevice, message);
-//               frame.setFrameType(QCanBusFrame::DataFrame);
-//
-//  device->writeFrame(frame);
-//}
+void CANConnectionEngine::slotSendMessage(const char* DataCommand, int size, uint16_t IDDevice)
+{
+  QByteArray message(DataCommand,size);
+  //qDebug() << OutputFilter::Filter(100) << "[ CAN ] SEND: " << QString(message.toHex()); 
+
+  QCanBusFrame frame = QCanBusFrame(IDDevice, message);
+               frame.setFrameType(QCanBusFrame::DataFrame);
+
+  device->writeFrame(frame);
+}
 
 
 

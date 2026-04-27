@@ -20,6 +20,10 @@ int MESSAGE_HEADER_ROTARY::getMessageSize()
 
 QDataStream& operator<<(QDataStream& out_stream, MESSAGE_HEADER_ROTARY& Src)
 {
+    //out_stream.setByteOrder(QDataStream::LittleEndian);
+    //out_stream.setFloatingPointPrecision(QDataStream::DoublePrecision);
+
+    //qDebug() << "MESSAGE IDENT: " << Src.MESSAGE_IDENT;
     out_stream << Src.TIME.sec << Src.TIME.nsec << Src.MESSAGE_IDENT << Src.RESERVE;
     return out_stream;
 }
@@ -53,23 +57,31 @@ void ControlTX::setData(StateRotaryControl setting)
 void operator>>(QDataStream& stream, ControlTX& rec) { stream >> rec.value0 >> rec.value1; }
 void ControlTX::operator>>(QDataStream& stream) 
 { 
-//  stream << value0.mode << value0.digital << value0.reserve << value0.acc_limit << value0.target;           
-//  stream << value1.mode << value1.digital << value1.reserve << value1.acc_limit << value1.target;           
 
-  stream << value0.mode << value0.Param2 << value0.Param3 << value0.Param4 
-         << value0.Param5 << value0.Param6 << value0.Param7 << value0.Param8 << value0.target;           
-  stream << value1.mode << value1.Param2 << value1.Param3 << value1.Param4 
-         << value1.Param5 << value1.Param6 << value1.Param7 << value1.Param8 << value1.target;           
+  stream.setByteOrder(QDataStream::LittleEndian);
+  stream.setFloatingPointPrecision(QDataStream::DoublePrecision);
+//  stream << value0.mode << value0.Param2 << value0.Param3 << value0.Param4 
+//         << value0.Param5 << value0.Param6 << value0.Param7 << value0.Param8 << value0.target;           
+//  stream << value1.mode << value1.Param2 << value1.Param3 << value1.Param4 
+//         << value1.Param5 << value1.Param6 << value1.Param7 << value1.Param8 << value1.target;           
+
+stream << value0.mode << value0.digital << value0.reserve1 << value0.acc_limit << value0.reserve2 << value0.target;
+stream << value1.mode << value1.digital << value1.reserve1 << value1.acc_limit << value1.reserve2 << value1.target;
 }
 void operator<<(QDataStream& stream, ControlTX& src) 
 { 
 //  stream << src.value0.mode << src.value0.digital << src.value0.reserve << src.value0.acc_limit << src.value0.target; 
 //  stream << src.value1.mode << src.value1.digital << src.value1.reserve << src.value1.acc_limit << src.value1.target; 
 
-  stream << src.value0.mode << src.value0.Param2 << src.value0.Param3 << src.value0.Param4 
-         << src.value0.Param5 << src.value0.Param6 << src.value0.Param7 << src.value0.Param8 << src.value0.target;           
-  stream << src.value1.mode << src.value1.Param2 << src.value1.Param3 << src.value1.Param4 
-         << src.value1.Param5 << src.value1.Param6 << src.value1.Param7 << src.value1.Param8 << src.value1.target;           
+  stream.setByteOrder(QDataStream::LittleEndian);
+  stream.setFloatingPointPrecision(QDataStream::DoublePrecision);
+//  stream << src.value0.mode << src.value0.Param2 << src.value0.Param3 << src.value0.Param4 
+//         << src.value0.Param5 << src.value0.Param6 << src.value0.Param7 << src.value0.Param8 << src.value0.target;           
+//  stream << src.value1.mode << src.value1.Param2 << src.value1.Param3 << src.value1.Param4 
+//         << src.value1.Param5 << src.value1.Param6 << src.value1.Param7 << src.value1.Param8 << src.value1.target;           
+
+stream << src.value0.mode << src.value0.digital << src.value0.reserve1 << src.value0.acc_limit << src.value0.reserve2 << src.value0.target;
+stream << src.value1.mode << src.value1.digital << src.value1.reserve1 << src.value1.acc_limit << src.value1.reserve2 << src.value1.target;
 }
 
 //=========================================================
